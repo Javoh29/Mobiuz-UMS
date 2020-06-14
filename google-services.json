@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "915690133950",
+    "firebase_url": "https://umsdealer-77cc5.firebaseio.com",
+    "project_id": "umsdealer-77cc5",
+    "storage_bucket": "umsdealer-77cc5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:915690133950:android:88ca8636254f7431",
+        "android_client_info": {
+          "package_name": "uz.beetechno.umsdealer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "915690133950-893v627h75dde7d4i61bbve1so1tu02v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "uz.beetechno.umsdealer",
+            "certificate_hash": "3e3716843f58b7ea126f9ab6b2d64654eca7da90"
+          }
+        },
+        {
+          "client_id": "915690133950-1ncfecjrmerk37dujbne91u1ng2orm42.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKfDRgN6mkeKWZc_drNoj1xReMweNoy3c"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "915690133950-1ncfecjrmerk37dujbne91u1ng2orm42.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group>
+        <item
+            android:id="@+id/nav_language"
+            android:icon="@drawable/ic_language"
+            android:title="@string/change_language" />
+    </group>
+
+    <item android:title="@string/support_service">
+        <menu>
+            <item
+                android:id="@+id/nav_support"
+                android:icon="@drawable/ic_call_nav_draw"
+                android:title="@string/call" />
+
+        </menu>
+    </item>
+    <group
+        android:id="@+id/moreNav"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/ic_share"
+            android:title="@string/share_nav" />
+    </group>
+
+</menu>

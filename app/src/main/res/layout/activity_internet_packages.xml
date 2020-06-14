@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="uz.tillo.umsdealer.Activities.InternetPackagesActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        
+        <android.support.design.widget.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabMode="scrollable"
+            android:id="@+id/internetTabs"
+            app:tabTextColor="@color/white"
+            android:background="@color/colorPrimaryDark"
+            app:tabIndicatorColor="@color/green"
+            app:tabSelectedTextColor="@color/green"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/internetViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:id="@+id/internetInfoContainer"
+        android:layout_height="match_parent">
+
+
+    </FrameLayout>
+</RelativeLayout>

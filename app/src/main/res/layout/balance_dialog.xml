@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="60dp"
+        android:foreground="?selectableItemBackground"
+        android:clickable="true"
+        android:text="@string/balance"
+        android:background="@null"
+        android:id="@+id/balanceCheckBtn"
+        android:focusable="true" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?selectableItemBackground"
+        android:clickable="true"
+        android:minHeight="60dp"
+        android:text="@string/lastpayment"
+        android:background="@null"
+        android:id="@+id/lastPaymentBtn"
+        android:focusable="true" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?selectableItemBackground"
+        android:minHeight="60dp"
+        android:clickable="true"
+        android:text="@string/myDisCharge"
+        android:background="@null"
+        android:id="@+id/myDisChargeBtn"
+        android:focusable="true" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="60dp"
+        android:foreground="?selectableItemBackground"
+        android:clickable="true"
+        android:text="@string/RemainTrafBtn"
+        android:background="@null"
+        android:id="@+id/RemainTrafBtn"
+        android:focusable="true" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="60dp"
+        android:foreground="?selectableItemBackground"
+        android:clickable="true"
+        android:text="@string/myNumber"
+        android:background="@null"
+        android:id="@+id/myNumberBtn"
+        android:focusable="true" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="60dp"
+        android:foreground="?selectableItemBackground"
+        android:clickable="true"
+        android:text="@string/allMyNumber"
+        android:background="@null"
+        android:id="@+id/allMyNumbersBtn"
+        android:focusable="true" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="60dp"
+        android:foreground="?selectableItemBackground"
+        android:clickable="true"
+        android:text="@string/CheckActServ"
+        android:background="@null"
+        android:id="@+id/CheckActServ"
+        android:focusable="true" />
+
+</LinearLayout>
