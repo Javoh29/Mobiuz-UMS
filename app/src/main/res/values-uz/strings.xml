@@ -28,13 +28,14 @@
 
 
     <string name="minute_packages">Daqiqa va SMS</string>
-    <string name="minute_60">60 Daqiqa 4 000 so`m</string>
-    <string name="minute_120">120 Daqiqa 7 000 so`m</string>
-    <string name="minute_180">180 Daqiqa  10 000 so`m</string>
-    <string name="minute_300">300 Daqiqa  16 000 so`m</string>
-    <string name="minute_900">900 Daqiqa  37 000 so`m</string>
-    <string name="minute_1200">1200 Daqiqa  45 000 so`m</string>
-    <string name="minute_1800">1800 Daqiqa  62 000 so`m</string>
+    <string name="minute_60">60 Daqiqa + 60 sms 4 000 so`m</string>
+    <string name="minute_120">120 Daqiqa + 120 sms 7 000 so`m</string>
+    <string name="minute_180">180 Daqiqa + 180 sms 10 000 so`m</string>
+    <string name="minute_300">300 Daqiqa + 300 sms 16 000 so`m</string>
+    <string name="minute_900">900 Daqiqa + 900 sms 37 000 so`m</string>
+    <string name="minute_1200">1200 Daqiqa + 1200 sms 45 000 so`m</string>
+    <string name="minute_1800">1800 Daqiqa + 1800 sms 62 000 so`m</string>
+
     <string name="myDisCharge">Mening xarajatlarim</string>
     <string name="myNumber">Mening raqamim</string>
     <string name="night_1000">Tun 1000 Mb  5 000 so`m</string>
@@ -48,16 +49,16 @@
     <string name="night_drive_warning">Tungi DRIVE xizmati abonentlarga har tun soat 00:00 dan 08:00 gacha internetdan cheksiz foydalanish imkonini beradi.</string>
     <string name="night_packages">TUNGI</string>
 
-    <string name="package_300">To\'plam 300 Mb 12 500 so`m</string>
-    <string name="package_500">To\'plam 500 Mb 16 500 so`m</string>
-    <string name="package_1000">To\'plam 1000 Mb 22 000 so`m</string>
-    <string name="package_2000">To\'plam 2000 Mb 33 000 so`m</string>
-    <string name="package_3000">To\'plam 3000 Mb 45 000 so`m</string>
-    <string name="package_5000">To\'plam 5000 Mb 56 000 so`m</string>
-    <string name="package_10000">To\'plam 10000 Mb 84 000 so`m</string>
-    <string name="package_20000">To\'plam 20000 Mb 150 000 so`m</string>
-    <string name="package_30000">To\'plam 30000 Mb 164 000 so`m</string>
-    <string name="package_50000">To\'plam 50000 Mb 252 000 so`m</string>
+    <string name="package_300">To\'plam 300 Mb + 75 Mb 12 500 so`m</string>
+    <string name="package_500">To\'plam 500 Mb + 125 Mb 16 500 so`m</string>
+    <string name="package_1000">To\'plam 1000 Mb + 250 Mb 22 000 so`m</string>
+    <string name="package_2000">To\'plam 2000 Mb + 500 Mb 33 000 so`m</string>
+    <string name="package_3000">To\'plam 3000 Mb + 750 Mb 45 000 so`m</string>
+    <string name="package_5000">To\'plam 5000 Mb + 1250 Mb 56 000 so`m</string>
+    <string name="package_10000">To\'plam 10000 Mb + 2500 Mb 84 000 so`m</string>
+    <string name="package_20000">To\'plam 20000 Mb + 5000 Mb 150 000 so`m</string>
+    <string name="package_30000">To\'plam 30000 Mb + 7500 Mb 164 000 so`m</string>
+    <string name="package_50000">To\'plam 50000 Mb + 12500 Mb 252 000 so`m</string>
 
     <string name="packages">OYLIK</string>
     <string name="service">Xizmatlar</string>
@@ -379,6 +380,7 @@
         <item>tariff_mobi_90</item>
         <item>tariff_mobi_110</item>
         <item>tariff_mobi_150</item>
+        <item>tariff_gap</item>
         <item>tariff_yorqin</item>
         <item>tariff_omad</item>
         <item>tariff_terminal</item>
@@ -555,6 +557,20 @@ Internetning 1 MB trafigi, 336,83 сум 1 MB Internet-trafik uchun
         <item>@drawable/shodlik</item>
     </string-array>
 
+
+    <string-array name="tariff_gap">
+        <item>Gap yo\'q</item>
+        <item>"Abonent to‘lovi oyiga/kuniga 35 000 /1750 so‘m; 8000/267 MB Mobil internet oyiga/kuniga,
+O'zbekiston bo'yicha qo'ng'iroqlarning bir daqiqasi, 12 so‘m MOBIUZ abonentlariga, 12 so‘m O‘zbekistonning boshqa mobil operatorlariga
+12 so‘m Shahar raqamlariga, O'zbekiston bo'yicha 1 ta SMS-xabar, 0 so‘m Kiruvchi SMS-xabar, 12 so‘m Chiquvchi SMS-xabarlar – Mobiuz abonentlariga,
+12 so‘m Chiquvchi SMS-xabarlar – O‘zbekistonning boshqa mobil operatorlari abonentlariga, 631,5 so‘m Chiquvchi xalqaro SMS-xabarlar*
+Internetning 1 MB trafigi 12 so‘m, Internetning 1 MB trafigi (oyiga 8000 MB tugagandan keyin)"
+        </item>
+        <item>*171*100*010100180*1</item>
+        <item>@drawable/gap</item>
+    </string-array>
+
+
     <!--Yangiliklar-->
 
 
@@ -595,5 +611,13 @@ Minglab horijiy va mahalliy film, serial va ko‘rsatuvlar, har bir foydalanuvch
     <string name="less_tariff">Qisqacha</string>
 
     <string name="buy">Olish</string>
+
+    <string name="aksiya">Aksiya (1+25% bonus)! Oylik internet-to\'plamlar sovg\'a!
+2020-уil  6-iyul sanasidan 6-avgustgacha</string>
+
+    <string name="sms">sms</string>
+
+    <string name="aksiya_sms">"1+1 Aksiyasi "Daqiqalar to\'plami" xarid qilinganda-xuddi shunday hajmdagi SMS to\'plam sovg\'a 20.07.2020 dan  20.09.2020 gacha"</string>
+
 
 </resources>

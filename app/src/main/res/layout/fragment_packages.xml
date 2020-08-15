@@ -9,6 +9,14 @@
         android:orientation="vertical">
 
         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textColor="@color/black"
+            android:text="@string/aksiya"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:padding="5dp"/>
+        <TextView
             android:id="@+id/packageInfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

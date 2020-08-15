@@ -19,7 +19,7 @@
             android:paddingRight="10dp"
             android:paddingBottom="5dp">
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/super0"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -121,7 +121,7 @@
                     </RelativeLayout>
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
         </LinearLayout>
 
@@ -146,7 +146,7 @@
             android:paddingRight="10dp"
             android:paddingBottom="5dp">
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/promisePayment"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -249,7 +249,7 @@
                     </RelativeLayout>
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
         </LinearLayout>
 
@@ -262,7 +262,7 @@
             android:paddingRight="10dp"
             android:paddingBottom="5dp">
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/holdCall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -379,7 +379,7 @@
                     </RelativeLayout>
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
         </LinearLayout>
 
@@ -392,7 +392,7 @@
             android:paddingRight="10dp"
             android:paddingBottom="5dp">
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/missedCall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -509,7 +509,7 @@
                     </RelativeLayout>
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
         </LinearLayout>
 
@@ -522,7 +522,7 @@
             android:paddingRight="10dp"
             android:paddingBottom="5dp">
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/antiAON"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -639,7 +639,7 @@
                     </RelativeLayout>
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
         </LinearLayout>
 
@@ -652,7 +652,7 @@
             android:paddingRight="10dp"
             android:paddingBottom="5dp">
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/lte4g"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -769,7 +769,7 @@
                     </RelativeLayout>
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
         </LinearLayout>
 
@@ -782,7 +782,7 @@
             android:paddingRight="10dp"
             android:paddingBottom="5dp">
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/checkActiveServices"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -883,7 +883,7 @@
                     </RelativeLayout>
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
         </LinearLayout>
 
@@ -896,7 +896,7 @@
             android:paddingRight="10dp"
             android:paddingBottom="5dp">
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:id="@+id/internationCall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -998,7 +998,7 @@
                     </RelativeLayout>
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
         </LinearLayout>
 
@@ -1011,7 +1011,7 @@
             android:paddingRight="10dp"
             android:paddingBottom="5dp">
 
-            <android.support.v7.widget.CardView
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
@@ -1111,7 +1111,7 @@
                     </RelativeLayout>
                 </LinearLayout>
 
-            </android.support.v7.widget.CardView>
+            </androidx.cardview.widget.CardView>
 
         </LinearLayout>
 

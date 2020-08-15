@@ -13,6 +13,17 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:textColor="@color/black"
+                android:text="@string/aksiya_sms"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_margin="5dp"
+                android:padding="5dp"/>
+
             <Button
                 android:id="@+id/minuteCheck"
                 android:layout_width="match_parent"

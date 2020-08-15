@@ -128,27 +128,12 @@
                   <entry key="vectorAssetStep">
                     <value>
                       <PersistentState>
-                        <option name="children">
-                          <map>
-                            <entry key="clipartAsset">
-                              <value>
-                                <PersistentState>
-                                  <option name="values">
-                                    <map>
-                                      <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material_design_icons/navigation/ic_refresh_black_24dp.xml" />
-                                    </map>
-                                  </option>
-                                </PersistentState>
-                              </value>
-                            </entry>
-                          </map>
-                        </option>
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
                             <entry key="color" value="ff0025" />
-                            <entry key="outputName" value="ic_telegram" />
-                            <entry key="sourceFile" value="C:\Users\K556U\Downloads\telegram.svg" />
+                            <entry key="outputName" value="ic_back" />
+                            <entry key="sourceFile" value="C:\Users\Javoh\Pictures\Figma\mobiuz\ic_back.svg" />
                           </map>
                         </option>
                       </PersistentState>

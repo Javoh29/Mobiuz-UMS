@@ -3,31 +3,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="uz.tillo.umsdealer">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".App"
         android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_descriptor"
         android:icon="@drawable/mobiuz"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/app_icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Activities.UsefulActivity" />
-        <activity android:name=".Activities.NewsActivity" />
 
-        <meta-data
-            android:name="com.google.firebase.messaging.default_notification_icon"
-            android:resource="@drawable/app_icon" />
-        <meta-data
-            android:name="com.google.firebase.messaging.default_notification_color"
-            android:resource="@color/colorPrimary" />
-
-        <activity
-            android:name=".Activities.MainActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"
+        <activity android:name=".ui.activity.HomeActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,6 +26,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Activities.UsefulActivity" />
+        <activity android:name=".Activities.NewsActivity" />
+        <activity android:name=".Activities.MainActivity" />
         <activity android:name=".Activities.TariffsActivity" />
         <activity android:name=".Activities.InternetPackagesActivity" />
         <activity android:name=".Activities.ServiceActivity" />

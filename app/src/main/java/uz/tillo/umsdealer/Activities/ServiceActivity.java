@@ -6,8 +6,8 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -21,8 +21,8 @@ import java.util.Objects;
 
 import at.blogc.android.views.ExpandableTextView;
 import uz.tillo.umsdealer.R;
-import uz.tillo.umsdealer.Utils.Functions;
-import uz.tillo.umsdealer.Utils.PhoneCodes;
+import uz.tillo.umsdealer.utils.Functions;
+import uz.tillo.umsdealer.utils.PhoneCodes;
 
 public class ServiceActivity extends AppCompatActivity implements View.OnClickListener {
     Functions functions;

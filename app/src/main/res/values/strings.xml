@@ -38,18 +38,17 @@
     <string name="telegram_channel">Mobiuz канал</string>
 
 
-
     <string name="check_internet_traffic">Проверить остаток</string>
-    <string name="package_300">Пакет 300 Мб 12 500 сум</string>
-    <string name="package_500">Пакет 500 Мб 16 500 сум</string>
-    <string name="package_1000">Пакет 1000 Мб 22 000 сум</string>
-    <string name="package_2000">Пакет 2000 Мб 33 000 сум</string>
-    <string name="package_3000">Пакет 3000 Мб 45 000 сум</string>
-    <string name="package_5000">Пакет 5000 Мб 56 000 сум</string>
-    <string name="package_10000">Пакет 10000 Мб 84 000 сум</string>
-    <string name="package_20000">Пакет 20000 Мб 150 000 сум</string>
-    <string name="package_30000">Пакет 30000 Мб 164 000 сум</string>
-    <string name="package_50000">Пакет 50000 Мб 252 000 сум</string>
+    <string name="package_300">Пакет 300 Мб + 75 Мб 12 500 сум</string>
+    <string name="package_500">Пакет 500 Мб + 125 Мб 16 500 сум</string>
+    <string name="package_1000">Пакет 1000 Мб + 250 Мб 22 000 сум</string>
+    <string name="package_2000">Пакет 2000 Мб + 500 Мб 33 000 сум</string>
+    <string name="package_3000">Пакет 3000 Мб + 750 Мб 45 000 сум</string>
+    <string name="package_5000">Пакет 5000 Мб + 1250 Мб 56 000 сум</string>
+    <string name="package_10000">Пакет 10000 Мб + 2500 Мб 84 000 сум</string>
+    <string name="package_20000">Пакет 20000 Мб + 5000 Мб 150 000 сум</string>
+    <string name="package_30000">Пакет 30000 Мб + 7500 Мб 164 000 сум</string>
+    <string name="package_50000">Пакет 50000 Мб + 12500 Мб 252 000 сум</string>
 
     <string name="night_1000">1000 Мб  5 000 сум</string>
     <string name="night_2000">2000 Мб  9 500 сум</string>
@@ -101,13 +100,14 @@
 
     <string name="minute_packages">Минут и СМС</string>
 
-    <string name="minute_60">60 Минут\t\t 4000</string>
-    <string name="minute_120">120 Минут\t\t 7 000 сум</string>
-    <string name="minute_180">180 Минут\t\t 10 000 сум</string>
-    <string name="minute_300">300 Минут\t\t 16 000 сум</string>
-    <string name="minute_900">900 Минут\t\t 37 000 сум</string>
-    <string name="minute_1200">1200 Минут\t\t 45 000 сум</string>
-    <string name="minute_1800">1800 Минут\t\t 62 000 сум</string>
+    <string name="minute_60">60 Минут + 60 смс 4000</string>
+    <string name="minute_120">120 Минут + 120 смс 7 000 сум</string>
+    <string name="minute_180">180 Минут + 180 смс 10 000 сум</string>
+    <string name="minute_300">300 Минут + 300 смс 16 000 сум</string>
+    <string name="minute_900">900 Минут + 900 смс 37 000 сум</string>
+    <string name="minute_1200">1200 Минут + 1200 смс 45 000 сум</string>
+    <string name="minute_1800">1800 Минут + 1800 смс 62 000 сум</string>
+
     <string name="sms_100" translatable="false">SMS 100\t\t\t4 211 сум</string>
     <string name="sms_300" translatable="false">SMS 300\t\t\t10 105 сум</string>
     <string name="choose_language">Выберите язык</string>
@@ -417,6 +417,7 @@
         <item>tariff_mobi_90</item>
         <item>tariff_mobi_110</item>
         <item>tariff_mobi_150</item>
+        <item>tariff_gap</item>
         <item>tariff_yorqin</item>
         <item>tariff_omad</item>
         <item>tariff_terminal</item>
@@ -575,9 +576,20 @@ SMS по Узбекистану за сообщение, 0,00 Входящее S
         <item>@drawable/shodlik</item>
     </string-array>
 
+
+    <string-array name="tariff_gap">
+        <item>Gap yo\'q</item>
+        <item>8000/267 МБ включенного мобильного интернета в месяц/в день; Звонки по Узбекистану за минуту 12 сум Исходящие звонки абонентам MOBIUZ,
+12 сум Исходящие звонки абонентам других мобильных операторов по Узбекистану, 12 сум Исходящие звонки на городские телефоны,SMS по Узбекистану за сообщение,0 сум
+Входящее SMS-сообщение 12 сум, Исходящие SMS - сообщения абонентам внутри сети MOBIUZ,12 сум Исходящие SMS - сообщения абонентам на мобильные сети других операторов Узбекистана
+631,5 сум Исходящие международные SMS – сообщения*, Интернет за 1 Мб трафика, 12 сум 1 MB интернет-трафика сверх лимита 8000 MB в месяц
+        </item>
+        <item>*171*100*010100180*1</item>
+        <item>@drawable/gap</item>
+    </string-array>
+
+
     <!--Yangiliklar-->
-
-
 
 
     <string name="tiklash_title_news">Воспользуйтесь услугой «Восстановление номера» не выходя из дома!</string>
@@ -599,4 +611,25 @@ SMS по Узбекистану за сообщение, 0,00 Входящее S
 Рады сообщить о запуске Мобильного ТВ в рамках мобильного приложения iTV.
 Тысячи зарубежного и отечественного видеоконтента, телеканалы на любой вкус, которые подарят вам отличное настроение и помогут отлично провести свободное время.
     </string>
+
+
+    <string name="aksiya">Акция (1+25% Бонус )! Месячные интернет - пакеты в подарок!
+ с 6 июль по 9 август 2020г</string>
+
+
+    <string name="sms">смс</string>
+
+    <string name="aksiya_sms">"1+1 Акция при покупке "Пакета минут - SMS - пакет аналогичного обьема в подарок с 20.07.2020 по 20.09.2020"</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_internet">Internet</string>
+    <string name="text_sms">Daqiqa/SMS</string>
+    <string name="text_rate">Tariflar</string>
+    <string name="text_service">Xizmatlar</string>
+    <string name="text_balance">Balans</string>
+    <string name="text_more">Foydali</string>
+    <string name="text_load_data">Maʼlumotlar yuklanmoqda</string>
+    <string name="text_data_loaded">Maʼlumotlar yuklandi</string>
+
+
 </resources>

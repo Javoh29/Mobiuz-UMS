@@ -4,8 +4,8 @@ import android.Manifest;
 import android.app.AlertDialog;
 import android.content.pm.PackageManager;
 import android.os.Build;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -18,8 +18,8 @@ import java.util.Objects;
 
 import uz.tillo.umsdealer.Fragments.InternetInfo;
 import uz.tillo.umsdealer.R;
-import uz.tillo.umsdealer.Utils.Functions;
-import uz.tillo.umsdealer.Utils.PhoneCodes;
+import uz.tillo.umsdealer.utils.Functions;
+import uz.tillo.umsdealer.utils.PhoneCodes;
 
 public class MinutePackages extends AppCompatActivity implements View.OnClickListener {
     Button minuteCheck,smsCheck;

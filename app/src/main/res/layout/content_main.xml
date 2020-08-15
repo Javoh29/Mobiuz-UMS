@@ -57,20 +57,20 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
+                        android:layout_marginStart="15dp"
                         android:layout_marginLeft="15dp"
-                        android:src="@drawable/ic_main_internet"
-                        android:layout_marginStart="15dp" />
+                        android:src="@drawable/ic_main_internet" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="15dp"
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="7dp"
-                        android:text="@string/internet_packages"
-android:layout_gravity="center"
                         android:gravity="center"
-                        android:textColor="@color/black"
-                        android:layout_marginStart="15dp" />
+                        android:text="@string/internet_packages"
+                        android:textColor="@color/black" />
 
                 </LinearLayout>
 
@@ -85,20 +85,20 @@ android:layout_gravity="center"
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
+                        android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
-                        android:src="@drawable/ic_main_balance"
-                        android:layout_marginEnd="15dp" />
+                        android:src="@drawable/ic_main_balance" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="7dp"
+                        android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
+                        android:gravity="center_horizontal"
                         android:text="@string/balance"
                         android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:gravity="center_horizontal"
-                        android:layout_marginEnd="15dp" />
+                        android:textColor="@color/black" />
 
                 </LinearLayout>
 
@@ -122,19 +122,19 @@ android:layout_gravity="center"
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
+                        android:layout_marginStart="15dp"
                         android:layout_marginLeft="15dp"
-                        android:src="@drawable/ic_main_tarrif"
-                        android:layout_marginStart="15dp" />
+                        android:src="@drawable/ic_main_tarrif" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="7dp"
+                        android:gravity="center_horizontal"
                         android:text="@string/tariffs"
                         android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:gravity="center_horizontal" />
+                        android:textColor="@color/black" />
 
                 </LinearLayout>
 
@@ -148,20 +148,20 @@ android:layout_gravity="center"
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
+                        android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
-                        android:src="@drawable/ic_main_minute"
-                        android:layout_marginEnd="15dp" />
+                        android:src="@drawable/ic_main_minute" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="7dp"
+                        android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
+                        android:gravity="center_horizontal"
                         android:text="@string/minute_packages"
                         android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:gravity="center_horizontal"
-                        android:layout_marginEnd="15dp" />
+                        android:textColor="@color/black" />
 
                 </LinearLayout>
 
@@ -185,20 +185,20 @@ android:layout_gravity="center"
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
+                        android:layout_marginStart="15dp"
                         android:layout_marginLeft="15dp"
-                        android:src="@drawable/ic_main_service"
-                        android:layout_marginStart="15dp" />
+                        android:src="@drawable/ic_main_service" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="7dp"
+                        android:gravity="center_horizontal"
                         android:text="@string/service"
                         android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:gravity="center_horizontal"
-                        android:layout_marginStart="15dp" />
+                        android:textColor="@color/black" />
 
                 </LinearLayout>
 
@@ -213,45 +213,30 @@ android:layout_gravity="center"
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
+                        android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
-                        android:src="@drawable/useful"
-                        android:layout_marginEnd="15dp" />
+                        android:src="@drawable/useful" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="7dp"
+                        android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
+                        android:gravity="center_horizontal"
                         android:text="@string/useful"
                         android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:gravity="center_horizontal"
-                        android:layout_marginEnd="15dp" />
+                        android:textColor="@color/black" />
 
                 </LinearLayout>
             </LinearLayout>
-
-            <Button
-                android:textSize="20sp"
-                android:onClick="USSD"
-                android:textStyle="bold"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_width="300dp"
-                android:layout_height="60dp"
-                android:layout_margin="5dp"
-                android:background="@drawable/package_balance_style"
-                android:clickable="true"
-                android:foreground="?selectableItemBackground"
-                android:text="USSD"
-                android:textColor="@color/white"
-                android:focusable="true" />
 
             <RatingBar
                 android:id="@+id/appRatingBar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
+                android:layout_margin="5dp"
                 android:numStars="5"
                 android:stepSize="1.0"
                 android:theme="@style/appRatingBarStyle" />
@@ -263,9 +248,9 @@ android:layout_gravity="center"
                 android:layout_gravity="center_horizontal"
                 android:background="@null"
                 android:clickable="true"
+                android:focusable="true"
                 android:minHeight="40dp"
-                android:text="@string/appRateBtn"
-                android:focusable="true" />
+                android:text="@string/appRateBtn" />
         </LinearLayout>
     </RelativeLayout>
 </ScrollView>
