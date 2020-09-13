@@ -7,16 +7,40 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="uz.tillo.umsdealer.ui.fragment.HomeFragment"
+        android:name="com.range.mobiuz.ui.fragment.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_homeFragment_to_internetFragment"
             app:destination="@id/internetFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_minutesFragment"
+            app:destination="@id/minutesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_rateFragment"
+            app:destination="@id/rateFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_serviceFragment"
+            app:destination="@id/serviceFragment" />
     </fragment>
     <fragment
         android:id="@+id/internetFragment"
-        android:name="uz.tillo.umsdealer.ui.fragment.InternetFragment"
+        android:name="com.range.mobiuz.ui.fragment.InternetFragment"
         android:label="fragment_internet"
         tools:layout="@layout/fragment_internet" />
+    <fragment
+        android:id="@+id/minutesFragment"
+        android:name="com.range.mobiuz.ui.fragment.MinutesFragment"
+        android:label="MinutesFragment"
+        tools:layout="@layout/fragment_minutes"/>
+    <fragment
+        android:id="@+id/rateFragment"
+        android:name="com.range.mobiuz.ui.fragment.RateFragment"
+        android:label="fragment_rate"
+        tools:layout="@layout/fragment_rate" />
+    <fragment
+        android:id="@+id/serviceFragment"
+        android:name="com.range.mobiuz.ui.fragment.ServiceFragment"
+        android:label="fragment_service"
+        tools:layout="@layout/fragment_service" />
 </navigation>

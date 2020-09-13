@@ -1,208 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="allMyNumber">Mening barcha raqamlarim</string>
-    <string name="RemainTrafBtn">Trafik qoldig\'i</string>
-    <string name="CheckActServ">Faol xizmatlarni tekshirish</string>
-    <string name="balance">Balans</string>
-    <string name="call">Qong\'iroq qilish</string>
-    <string name="call_permission_warn">Ruxsatsiz USSD so\'rovlar qongiroq orqali bo\'lmaydi!</string>
-    <string name="cancel">Orqaga</string>
-    <string name="change_language">Tilni o\'zgartirish</string>
-    <string name="more_tariff">Batafsil</string>
-    <string name="check_internet_traffic">Qoldiqni tekshirish</string>
-    <string name="choose_language">Tilni tanlang</string>
-    <string name="confirm_ask">"Quyidagi tarifga o\'tishga rozimisiz: "</string>
-    <string name="confirm_service_ask">Quyidagi xizmatni yoqishga rozimisiz?</string>
-    <string name="confirm_cancel_service_ask">Quyidagi xizmatni o\'chirishga rozimisiz?</string>
 
-    <string name="drive_1">1 Sutka 10 000 so`m</string>
-    <string name="drive_30">30 Sutka 120 000 so`m</string>
-    <string name="drive_7">7 Sutka 45 000 so`m</string>
-
-    <string name="internet_packages">Internet to\'plamlar</string>
-    <string name="lastpayment">Oxirgi to\'lov</string>
-    <string name="news">Yangiliklar</string>
-    <string name="useful">Foydali</string>
-    <string name="batafsil">Batafsil</string>
-    <string name="telegram_channel">Mobiuz kanal</string>
-
-
-    <string name="minute_packages">Daqiqa va SMS</string>
-    <string name="minute_60">60 Daqiqa + 60 sms 4 000 so`m</string>
-    <string name="minute_120">120 Daqiqa + 120 sms 7 000 so`m</string>
-    <string name="minute_180">180 Daqiqa + 180 sms 10 000 so`m</string>
-    <string name="minute_300">300 Daqiqa + 300 sms 16 000 so`m</string>
-    <string name="minute_900">900 Daqiqa + 900 sms 37 000 so`m</string>
-    <string name="minute_1200">1200 Daqiqa + 1200 sms 45 000 so`m</string>
-    <string name="minute_1800">1800 Daqiqa + 1800 sms 62 000 so`m</string>
-
-    <string name="myDisCharge">Mening xarajatlarim</string>
-    <string name="myNumber">Mening raqamim</string>
-    <string name="night_1000">Tun 1000 Mb  5 000 so`m</string>
-    <string name="night_2000">Tun 2000 Mb  9 500 so`m</string>
-    <string name="night_3000">Tun 3000 Mb  12 500 so`m</string>
-    <string name="night_5000">Tun 5000 Mb  17 000 so`m</string>
-    <string name="night_10000">Tun 10000 Mb 22 000 so`m</string>
-    <string name="night_20000">Tun 20000 Mb 33 000 so`m</string>
-    <string name="night_50000">Tun 50000 Mb 44 000 so`m</string>
-    <string name="night_drive">TUNGI DRIVE</string>
-    <string name="night_drive_warning">Tungi DRIVE xizmati abonentlarga har tun soat 00:00 dan 08:00 gacha internetdan cheksiz foydalanish imkonini beradi.</string>
-    <string name="night_packages">TUNGI</string>
-
-    <string name="package_300">To\'plam 300 Mb + 75 Mb 12 500 so`m</string>
-    <string name="package_500">To\'plam 500 Mb + 125 Mb 16 500 so`m</string>
-    <string name="package_1000">To\'plam 1000 Mb + 250 Mb 22 000 so`m</string>
-    <string name="package_2000">To\'plam 2000 Mb + 500 Mb 33 000 so`m</string>
-    <string name="package_3000">To\'plam 3000 Mb + 750 Mb 45 000 so`m</string>
-    <string name="package_5000">To\'plam 5000 Mb + 1250 Mb 56 000 so`m</string>
-    <string name="package_10000">To\'plam 10000 Mb + 2500 Mb 84 000 so`m</string>
-    <string name="package_20000">To\'plam 20000 Mb + 5000 Mb 150 000 so`m</string>
-    <string name="package_30000">To\'plam 30000 Mb + 7500 Mb 164 000 so`m</string>
-    <string name="package_50000">To\'plam 50000 Mb + 12500 Mb 252 000 so`m</string>
-
-    <string name="packages">OYLIK</string>
-    <string name="service">Xizmatlar</string>
-    <string name="service_mutlaqo_cheksiz_name">«Mutlaqo cheksiz!» aksiyasi</string>
-    <string name="service_mutlaqo_cheksiz_desc">«Mutlaqo cheksiz!» xizmati – bu 3 oy davomida O‘zbekiston bo‘yicha chiquvchi qo‘ng‘iroqlarga cheksiz daqiqalar
-        hamda har oy taqdim etiladigan 1000 MB mobil internet.\n«Mutlaqo cheksiz!» xizmati yoqilgandan boshlab 3 oy ichida tarif rejasini o‘zgartirib bo‘lmaydi.
-        Xizmat yoqilgandan keyin 3 o‘tib, xizmat ham o‘chadi, tarif rejasini o‘zgartirish ta’qiqi ham bekor qilinadi.
-        Xizmatni o`chirish uchun: *165*1#</string>
-
-    <string name="service_activeserv_desc">*140# USSD-buyrug\'i faol xizmatlarni tekshirish imkoniyatini beradi</string>
-    <string name="service_activeserv_name">Faollashtirilgan xizmatlarni tekshirish</string>
-    <string name="service_antiAON_desc">Raqamni aniqlashga qarshilik xizmatidan foydalanish: Abonentlik to\'lovi- 421 so`m kuniga) Raqamni aniqlashga qarshilik ulanish/xizmatni o\'chirish - bepul.</string>
-    <string name="service_antiAON_name">AntiAON</string>
-    <string name="service_family_desc">Xizmatdan foydalanish uchun abonent to\'lovi kuniga - 421 so`m. Rossiya Fеdеratsiyasi, Ukraina, Bеlorusiya va Turkmaniston MTS guruhi operatorlari, shuningdek, Armanistonda VIVACell-MTS abonеntlariga chiquvchi qo\'g\'iroqlar narxi – suhbatning daqiqasi 1053 so`m.</string>
-    <string name="service_holdCall_desc">Suhbat mobaynida javob berish jarayonida boshqa abonent kirish qo\'ng\'iroqlari (yoki qo\'ng\'iroq qilgan boshqa abonent) Chaqiriqni kutish rejimi imkonini beradi va kirish chaqiriqlarini mazkur joriy suhbat tugaguniga qadar ushlab turadi, ya\'ni navbatma-navbat ikki abonеnt bilan suhbatlashadi.</string>
-    <string name="service_holdCall_name">Chaqiriqni kutish va ushlab turish</string>
-    <string name="service_international_desc">Markaziy Osiyo (Tojikiston, Qozog\'iston, Turkmaniston, Qirg\'iziston) 2316 so`m Rossiya va MDH mamlakatlari 3158 so`m, Yevropa 6948 so`m, Osiyo 8632 so`m. Boshqa mamlakatlar 8211 so`m</string>
-    <string name="service_international_name">Xalqaro qo\'ng\'iroqlar</string>
-    <string name="service_lte4g_desc">4G LTE Toshkent shahrining har bir qismida! UMS Interneti ortiqcha harajatsiz 4G LTE tezligida! Xizmatga ulanish narxi – 0 so`m</string>
-    <string name="service_missedCall_desc">Yangi ulangan abonentlarga ushbu xizmatini 30 kun davomida bepul ishlatish uchun faollashtirish imkoniyati taqdim etiladi! 30 kundan so\'ng xizmat narxi 84 so`m ni tashkil etadi. Amaldagi abonentlar uchun xizmatining abonent to\'lovi - kuniga 84 so`m</string>
-    <string name="service_missedCall_name">Sizga qo\'ng\'iroq qilishdi &amp; Men aloqadaman!</string>
-    <string name="service_promisePayment_desc">Ushbu xizmat kelgusida to\'lanadigan mablag\' hisobidan aloqa xizmatlaridan foydalanishni davom ettirish uchun o\'z hisobvarag\'ingizga 3 kun muddatga 12632 so`m tushirish imkonini beradi. Va\'da qilingan to\'lov xizmatining amal qilish muddati tugagach, hisobvaraqdan 14737 so`m (berilgan 12632 so`m va faollashtirish uchun 2105 so`m) yechib olinadi.</string>
-    <string name="service_promisePayment_name">Va\'da qilingan to\'lov</string>
-    <string name="service_super0_desc">Super 0 xizmati yoqilganda UMS tarmog\'i ichida chiquvchi qo\'ng\'iroqlar uchun bir kalendar oyi muddatiga 15000 daqiqalik to\'plam ishga tushadi. Super 0 xizmati yoqilganda Konferents-aloqa xizmati ishlamaydi. Xizmat narxi 4211 so`m. Ijobiy balansda faollashtirilgan paytda yechib olinadi! Xizmat amal qilish muddati cheklanmagan.</string>
-    <string name="service_internet_helper">Internet yordamchi -  bu Sizning Internet yordamida shaxsiy ma\'lumotlarni olish doimiy imkonini
-        beruvchi shaxsiy kabinetingizdir.\n\n\"Internet yordamchi\" quyidagilarning imkonini beradi:\n\nBalans haqida axborotlarni bilish
-        \n\n- To\'lovlar tarixini ko\'rish\n- Xizmat ko\'rsatish tarif rejasini o\'zgartirish\n- Qo\'shimcha xizmatlarni ulash/o\'chirib qo\'yish
-        \n- Sevimli raqamlarni qo\'shish, o\'zgartirish yoki o\'chirish\n- Kompyuter klaviaturasida matn terib sms xabarlar jo\'natish\n
-        \nKompaniya abonent shaxsiy ma\'lumotlarini \"Internet yordamchi\" himoyasi yo\'li bilan maxfiy tutishni ta\'minlaydi. Abonentlar
-        tomonidan maxsus USSD buyruq vositasida o\'z telefonida mustaqil parol o\'rnatish ko\'zda tutilgan.</string>
-    <string name="share">Ilovani ulashish</string>
-    <string name="support_service">Call center</string>
-    <string name="sure_confirm">Siz rozimisiz?</string>
-    <string name="talk">Muloqot</string>
-    <string name="tariffs">Tariflar</string>
-    <string name="ums_slogan">TALABLARGA MOS\nALOQA OPERATORI</string>
-    <string name="yes_dialog">Xa</string>
-    <string name="change_tariff">O\'tish</string>
-    <string name="banner_ad">TASHQI REKLAMA QO\'NG\'IROQ QILISH</string>
-    <string name="banner_ad_number">+99897 1300909</string>
-    <string name="ads">Reklama</string>
-    <string name="turnOffMobileNet">Mobil internet xizmatini o\'chirish</string>
-    <string name="turnOnMobileNet">Mobil internet xizmatini yoqish</string>
-    <string name="onNetTurnOff">OnNet to\'plamini o\'chirish</string>
-    <string name="internet_settings">Internet sozlamalar</string>
-    <string name="settings_get">Mobil internet sozlamalarni olish</string>
-    <string name="dialog_permission_settings">Qo\'ng\'iroqlarga ruxsat kerak</string>
-    <string name="dialog_settings">Sozlamalar</string>
-    <string name="package_title_info">
-        <![CDATA[
-        <p>Faollashtirilgan Internet-to‘plamda qolgan trafik hajmini bilish uchun *102# USSD buyrug‘ini yuborish yoki 616019 raqamiga 3 raqamini SMS-xabar shaklida yuborish kerak.</p>
-        <p>To‘plam narxi faollashtirish chog‘ida chiqarib olinadi.</p>
-        <b>Shartlar:</b>
-        ]]>
-    </string>
-    <string name="package_text_info"><![CDATA[
-        <ul>
-		<li>&nbsp;&nbsp;&nbsp;<nobr>  Internet-to</nobr>‘plamlardan foydalanish uchun dastlab «Mobil internet» xizmatini faollashtirish zarur (agar ilgari o‘chirilgan bo‘lsa); <br>
- </li>
-		<li>&nbsp;&nbsp;&nbsp;Kiritilgan trafikning tegishli hajmi, abonent bu&nbsp;davrda vaqtincha bandlangan muddatdan qat’i&nbsp;nazar, to‘plam faollashtirilgan kundan boshlab 30 kun ichida ishlatilishi mumkin; <br>
- <nobr></nobr></b></li>
-		<li>&nbsp;&nbsp;&nbsp;<nobr>Internet-to</nobr>‘plamlar ulanishi uchun to‘plam faollashtirilganidan keyin abonent hisobvarag‘ida kamida 0,01&nbsp;sh.b bo‘lishi shart; <br>
-		 To‘plamlarni sotib olishlar orasidagi vaqt oralig‘i&nbsp;10 daqiqadan kam bo‘lmasligi kerak; <br>
- </li>
-		<li>&nbsp;&nbsp;&nbsp;Internet-to‘plamni sotib olganingizdan keyin narxlash noto‘g‘ri bo‘lishiga yo‘l qo‘ymaslik uchun telefon, planshet yoki USB-modemingizni qayta yuklang (USB-modemni komputerdan chiqarib, yana qo‘ying).</li>
-		<li>&nbsp;&nbsp;&nbsp;Sotib olingan barcha to‘plamlar hajmi qo‘shiladi, ulardan foydalanish muddati esa, oxirgi sotib olingan to‘plam tugaydigan muddatgacha uzaytiriladi va&nbsp;u&nbsp;sotib olingan vaqtdan boshlab 30 kunni tashkil qiladi; <br>
- </li>
-		<li>&nbsp;&nbsp;&nbsp;Qo‘shilgan trafik tamom bo‘lganda yoki to‘plam muddati tugagandan keyin trafik belgilangan tariflarga muvofiq narxlana boshlaydi; <br>
- </li>
-		<li>&nbsp;&nbsp;&nbsp;Agar bir vaqtning o‘zida ham tarif rejasi doirasida berilgan, lekin foydalanilmagan megabaytlar, ham foydalanilmagan <nobr>internet-to</nobr>‘plam bor bo‘lsa, oldin tarif rejasining megabaytlari sarflanadi; <br>
- </li>
-		<li>&nbsp;&nbsp;&nbsp;Xizmat ko‘rsatish rejasi o‘zgarganda to‘plamlarni berish shartlari o‘zgarmaydi; <br>
- </li>
-		<li>&nbsp;&nbsp;&nbsp;To‘plamlar faqat abonent O‘zbekiston hududida «UMS» MChJning tarmog‘ida bo‘lgan vaqtda amal qiladi.</li>
-	</ul>
-	]]>
-    </string>
-    <string name="nightPackage_title_info">
-        <![CDATA[
-            <p>Tungi Internet-to’plam qoldig‘ini *203# USSD-buyrug’i yoki 616203 raqamiga 3 sonini sms-xabar tariqasida yuborish orqali tekshirib ko’rish mumkin.</p>
-            <b>Shartlar</b>
-        ]]>
-    </string>
-
-    <string name="nightPackage_text_info">
-        <![CDATA[
-            <ul>
-              <li>&nbsp;&nbsp;&nbsp;Tungi internet-to’plamlar uchun haq bir marta, faollashtirilgan paytda yechib olinadi.</li>
-
-              <li>&nbsp;&nbsp;&nbsp;Har bir internet-to’plam 30 kalendar kuni davomida, abonent vaqtinchalik blokirovka qilingan muddatdan qat’iy nazar amal qiladi</li>
-
-              <li>&nbsp;&nbsp;&nbsp;Tungi internet-to’plamlar 00:00dan 8:00gacha sarflanadi.</li>
-
-              <li>&nbsp;&nbsp;&nbsp;Faollashtirilgandan so’ng abonent hisobida kamida 0,01 sh.b qolsagina to’plamga ulanish mumkin.</li>
-
-              <li>&nbsp;&nbsp;&nbsp;Barcha sotib olingan to’plamlarning hajmi qo’shiladi, ularning foydalanish muddati esa har bir yangi to’plam faollashtirilgan kundan boshlab 30 kunga uzaytiriladi.</li>
-
-              <li>&nbsp;&nbsp;&nbsp;00:00dan 8:00gacha bo’lgan davrda internet-to’plamlar qo’yidagi navbat bilan sarflanadi:</li>
-
-              <li>&nbsp;&nbsp;&nbsp;Sotib olingan tungi internet-to’plam trafigi&gt;Tarif rejasi doirasidagi trafik&gt; OnNet xizmati doirasidagi trafik &gt;Sotib olingan bir martalik internet-to’plam.</li>
-
-              <li>&nbsp;&nbsp;&nbsp;Belgilangan trafik yakunlansa yoki to’plamning amal qilish muddati o’tsa, trafik abonent foydalanayotgan tarif bo’yicha hisoblanadi. </li>
-
-              <li>&nbsp;&nbsp;&nbsp;«Tungi Drive» xizmati yoqilgan bo’lsa, sotib olingan tungi internet-to’plam trafigi sarflanmaydi.</li>
-
-              <li>&nbsp;&nbsp;&nbsp;Bir nechta to’plamlarni harid qilish o’rtasidagi farq 10 daqiqadan kam bo’lmasligi kerak. </li>
-
-              <li>&nbsp;&nbsp;&nbsp;To’plamlar abonent O’zbekiston Respublikasi hududida «UMS» MChJ tarmogida bo’lgandagina amal qiladi.</li>
-
-              <li>&nbsp;&nbsp;&nbsp;Tungi internet-to’plamlar to’g’ri ishlashi uchun har kuni soat 00:00dan keyin internetni o’chirib, qayta yoqish lozim. Aks xolda tungi internet to’plamlarning ishga tushishi kafolatlanmaydi. </li>
-             </ul>
-        ]]>
-    </string>
-    <string name="nightDrivePackage_title_info">
-        <![CDATA[
-            <p><b>Yuridik shaxslar uchun:</b></p>
-            <p>Yuridik shaxslar xizmatni faollashtirish uchun yozma ariza bilan murojaat qilishlari kerak.</p><br>
-            <p><b>Diqqat:</b> «Tungi DRIVE» va «4G LTE tarmog’iga kirish» xizmatlari bir-birini inkor etuvchi bo’lib, bir vaqtning o’zida faqat bitta xizmat ishlashi mumkin.</p>
-            <b>Shartlar:</b>
-        ]]>
-    </string>
-    <string name="nightDrivePackage_text_info">
-        <![CDATA[
-            <ul>
-                <li>&nbsp;&nbsp;&nbsp;<b>«Tungi DRIVE 1»</b> xizmati uchun haq xizmat amal qiladigan bir davr uchun bir marta undiriladi. Agar abonent xizmatning yana bir tungi davrda amal qilishini istasa, ulanish takroran amalga oshirilishi kerak. Xizmatning amal qilish muddati faollashtirish vaqtidan boshlab 24 soatni tashkil qiladi;</li>
-                <li>&nbsp;&nbsp;&nbsp;<b>«Tungi DRIVE 7»</b> va <b>«Tungi DRIVE 30»</b> opsiyalari uchun haq bir marta undiriladi. Xizmatning amal qilish muddati opsiya ulangan vaqtdan boshlab tegishlicha 7 va 30 sutkani tashkil etadi;</li>
-                <li>&nbsp;&nbsp;&nbsp;bir vaqtning o‘zida uchta opsiyadan faqat bittasi ulanishi mumkin;</li>
-                <li>&nbsp;&nbsp;&nbsp;«Tungi DRIVE» xizmatiga «Absolut»dan boshqa barcha tarif rejalarining abonentlari ulanishi mumkin;</li>
-                <li>&nbsp;&nbsp;&nbsp;siz sotib olgan internet-to‘plamlar va tarif rejalari doirasidagi to‘plamlar bo‘yicha megabaytlar «Tungi DRIVE 1», «Tungi DRIVE 7» va «Tungi DRIVE 30» xizmatlaridan foydalanilayotganda (soat 0:00dan 8:00gacha) kamaymaydi;</li>
-                <li>&nbsp;&nbsp;&nbsp;«Tungi DRIVE» xizmatini ulash uchun abonentning balansida mablag‘ bor bo‘lishi kerak;</li>
-                <li>&nbsp;&nbsp;&nbsp;«Tungi DRIVE» xizmati faqat bandlanmagan holatda ishlaydi.;</li>
-                <li>&nbsp;&nbsp;&nbsp;Tarif o‘zgarganda ham «Tungi DRIVE» xizmati saqlanib qoladi;</li>
-                <li>&nbsp;&nbsp;&nbsp;Xizmat faqat O‘zbekiston hududida amal qiladi;</li>
-                <li>&nbsp;&nbsp;&nbsp;«Tungi DRIVE» xizmati to‘g‘ri ishlashi uchun joriy sessiyani to‘xtatib, soat 00:00dan keyin yangisini boshlash kerak. Aks holda «Tungi DRIVE» to‘g‘ri ishlashi kafolatlanmaydi;</li>
-                <li>&nbsp;&nbsp;&nbsp;«Tungi DRIVE» xizmati o‘chiriladigan hollarda narxlar to‘g‘ri chiqarilishi uchun dastlab barcha faol Internet sessiyalar yakunlanishi zarur;</li>
-                <li>&nbsp;&nbsp;&nbsp;Internetdan foydalanilayotganda har 60 daqiqada ulanish uzilib, sessiya yangilanadi;</li>
-                <li>&nbsp;&nbsp;&nbsp;Soat 0:00dan 8:00gacha bo‘lgan davrda «Tungi DRIVE» xizmati o‘chirilgan taqdirda, Internet-trafik tarif rejasiga muvofiq narxlana boshlaydi yoki Internet-to‘plamni sarflaydi (agar bor bo‘lsa).</li>
-            </ul>
-        ]]>
-    </string>
-
-    <string name="banner_call_word">Buyurtma</string>
-
-    <string name="minute_title_info">
+    <string name="minute_text_info">
         <![CDATA[
 
             <p>To\'plam amal qilish muddati – faollashtirilgan kundan boshlab 30 kalendar kuni.</p>
@@ -290,9 +89,7 @@
              </li>
             </ul>
         ]]>
-    </string>
 
-    <string name="minute_text_info">
          <![CDATA[
             <p>Pakеt narxi xizmat faollashtirilganda hisoblab olinadi.</p>
             <p>Faollashtirilgan «SMS-pakеti»da qolgan xabarlar sonini bilish uchun USSD-buyrug‘ini:</p>
@@ -315,309 +112,59 @@
     </ul>
         ]]>
     </string>
-    <string name="exit_dialog">Chiqish</string>
-    <string name="exit_confirm_dialog">Dasturdan chiqishni istaysizmi?</string>
-    <string name="sms_service_nav">SMS yuborish</string>
-    <string name="appRateBtn">Baholash</string>
 
-    <string name="week_packages">Haftalik to\'plamlar</string>
-    <string name="week_100">Haftalik 100 Mb 8 000 so`m</string>
-    <string name="week_200">Haftalik 200 Mb 12 000 so`m</string>
-    <string name="week_300">Haftalik 300 Mb 16 000 so`m</string>
-    <string name="week">Haftalik</string>
-
-    <string name="mini_packages">Kunlik to\'plamlar</string>
-    <string name="mini_packages_warning">Barcha kunlik internet to\'plamlarning amal qilish muddati 1 sutka</string>
-    <string name="day_50">Kunlik 50 Mb 2 500 so`m</string>
-    <string name="day_100">Kunlik 100 Mb 4 000 so`m</string>
-    <string name="day_200">Kunlik 200 Mb 5 000 so`m</string>
-    <string name="day_300">Kunlik 300 Mb 7 000 so`m</string>
-    <string name="day_500">Kunlik 500 Mb 7 500 so`m</string>
-    <string name="day_1000">Kunlik 1 000 Mb 10 000 so`m</string>
-    <string name="day_2000">Kunlik 2 000 Mb 14 000 so`m</string>
-    <string name="day_3000">Kunlik 3 000 Mb 19 000 so`m</string>
-    <string name="day_5000">Kunlik 5 000 Mb 24 000 so`m</string>
-    <string name="day_10000">Kunlik 10 000 Mb 35 000 so`m</string>
-    <string name="day">Kunlik</string>
-
-    <string name="weekPackage_title_info">
-        <![CDATA[
-            <p>To`plam holatini tekshirish: <i>*105#</i></p>
-            <b>Shartlar:</b>
-        ]]>
-    </string>
-    <string name="weekPackage_text_info">
-        <![CDATA[
-        <ul>
-         <li><p>&nbsp;&nbsp;&nbsp;Haftalik Internet-to`plamlarni faollashtirish uchun “Mobil Internet” xizmati yoqilgan bo`lishi shart.</p></li>
-		 <li><p>&nbsp;&nbsp;&nbsp;To`plamga kiritilgan trafik hajmi to`plam faollashtirilgan kundan boshlab (abonent raqami bandlangan/bandlanmagankligidan qat’iy nazar) 7 kalendar kuni davomida amal qiladi.</p></li>
-		 <li><p>&nbsp;&nbsp;&nbsp;Internet-to`plamni yoqish uchun abonent hisobida yetarlicha mablag` bo`lishi, ya’ni to`plam faollashtirilgandan keyin abonent hisobida kamida 0.01 sh.b bo`lishi shart.</p></li>
-		 <li><p>&nbsp;&nbsp;&nbsp;Bir necha to`plamlarni xarid qilish oralig`idagi vaqt kamida 10 daqiqani tashkil etishi kerak.</p></li>
-		 <li><p>&nbsp;&nbsp;&nbsp;Xarid qilingan barcha to`plamlarning hajmi qo`shiladi, foydalanish muddati esa ohirgi xarid qilingan to`plam muddatigicha uzaytiriladi va 7 kunni tashkil etadi.</p></li>
-		 <li><p>&nbsp;&nbsp;&nbsp;Belgilangan trafik yakunlanganidan so`ng yoki to`plam muddati tugaganidan keyin trafik belgilangan tariflar bo`yicha narxlanadi.</p></li>
-		 <li><p>&nbsp;&nbsp;&nbsp;Abonentda bir vaqtning o`zida tarif rejasi bo`yicha belgilangan to`plam va haftalik Internet-to`plam mavjud bo`lsa, birinchi bo`lib haftalik Internet-to`plam trafigi sarflanadi.</p></li>
-		 <li><p>&nbsp;&nbsp;&nbsp;Trafik sarflanish tartibi:</p></li>
-		 <li><p>&nbsp;&nbsp;&nbsp;Kunlik to`plam -&gt; Haftalik to`plam -&gt; Tarif rejasi bo`yicha trafik -&gt; Oylik to`plam</p></li>
-		 <li><p>&nbsp;&nbsp;&nbsp;Barcha narxlar soliqlarni hisobga olgan holda ko`rsatilgan.</p></li>
-		 <li><p>&nbsp;&nbsp;&nbsp;Tarif rejasi o`zgartirilganda to`plamlarni taqdim etilish shartlari o`zgarmaydi.</p></li>
-		 <li><p>&nbsp;&nbsp;&nbsp;Abonent O`zbekiston hududida, “UMS” MChJ tarmog`ida bo`lgandagina to`plamlar amal qiladi.</p></li>
-		 </ul>
-        ]]>
-    </string>
-    <string name="share_text">UMS Uzbekistan abonentlari uchun qulay dasturni tavsiya etaman:  https://play.google.com/store/apps/details?id=uz.tillo.umsdealer</string>
-    <string name="share_nav">Ulushish</string>
-    <string name="nav_tg_bot">Telegram kanal</string>
-    <string name="nav_vip_numbers">Chiroyli raqamlar</string>
-    <string name="nav_internet_helper">Internet-Yordamchi</string>
-    <string name="internet_package_bonus">+25% trafik bonusi 30.04.2018 ga qadar taqdim etiladi</string>
-
-    <string-array name="tariffs_list">
-        <item>tariff_mobi_20</item>
-        <item>tariff_mobi_30</item>
-        <item>tariff_mobi_40</item>
-        <item>tariff_mobi_50</item>
-        <item>tariff_mobi_70</item>
-        <item>tariff_mobi_90</item>
-        <item>tariff_mobi_110</item>
-        <item>tariff_mobi_150</item>
-        <item>tariff_gap</item>
-        <item>tariff_yorqin</item>
-        <item>tariff_omad</item>
-        <item>tariff_terminal</item>
-        <item>tariff_chilla_lite</item>
-        <item>tariff_shodlik</item>
-    </string-array>
-
-    <string-array name="tariff_mobi_20">
-        <item>Mobi 20</item>
-        <item>20 000/1 000 so\‘m oylik/kunlik abonent to\‘lovi,500/17 daqiqa (oyiga/kuniga) O\‘zbekiston bo\‘yicha chiquvchi qo\‘ng\‘iroqlarga,1 500/50 MB (oyiga/kuniga),
-500/17 SMS (oyiga/kuniga ),O\'zbekiston bo\'yicha qo\'ng\'iroqlarning bir daqiqasi 42,10 so\‘m O\’zbekistonning boshqa mobil operatorlari abonentlariga (oyiga 500 daqiqalik yoki kuniga 17 daqiqalik limit yakunlangandan keyin),
-42,10 so\‘m Shahar raqamlariga (oyiga 500 daqiqalik yoki kuniga 17 daqiqalik limit yakunlangandan keyin), O\'zbekiston bo\'yicha 1 ta SMS-xabar 0 so\‘m Kiruvchi SMS-xabar,
-42,10 so\‘m Chiquvchi SMS-xabarlar – Mobiuz abonentlariga (oyiga 500 SMS yoki kuniga 17 SMS\’lik limit yakunlangandan keyin), 42,10 so\‘m Chiquvchi SMS-xabarlar – O\’zbekistonning boshqa mobil operatorlari abonentlarga (oyiga 500 SMS yoki kuniga 17 SMS\’lik limit yakunlangandan keyin),
-631,5 so\‘m Chiquvchi xalqaro SMS-xabarlar, Internetning 1 MB trafigi 126,31 so\‘m Internetning 1 MB trafigi (oyiga 1 500 MB yoki kuniga 50 MB yakunlangandan keyin)
-        </item>
-        <item>*171*120*010100180</item>
-        <item>@drawable/mobi_20</item>
-    </string-array>
-
-    <string-array name="tariff_mobi_30">
-        <item>Mobi 30</item>
-        <item>30 000 so\‘m abonent to\‘lovi, 1 000 O\‘zbekiston bo\‘yicha chiquvchi qo\‘ng\‘iroqlarga,4 000 МB, 1 000 SMS, 0 so\‘m-kirish qo\‘ng\‘iroqlari,
-O\'zbekiston bo\'yicha qo\'ng\'iroqlarning bir daqiqasi, 84,2 so\‘m- UMS abonentlariga (1 000 daqiqalik limit yakunlangandan keyin),84,2 so\‘m O\’zbekistonning boshqa mobil operatorlari abonentlariga (1 000 daqiqalik limit yakunlangandan keyin),
-84,2 so\‘m Shahar raqamlariga (1 000 daqiqalik limit yakunlangandan keyin), O\'zbekiston bo\'yicha 1 ta SMS-xabar, 0 so\‘m Kiruvchi SMS-xabar
-84,2 so\‘m Chiquvchi SMS-xabarlar – UMS abonentlariga (1 000 SMS\’lik limit yakunlangandan keyin),84,2 so\‘m Chiquvchi SMS-xabarlar – O\’zbekistonning boshqa mobil operatorlari abonentlarga (1 000 SMS lik limit yakunlangandan keyin),
-631,5 so\‘m Chiquvchi xalqaro SMS-xabarlar*, Internetning 1 MB trafigi,
-421,04 so\‘m Internetning 1 MB trafigi (4 000 MB\’lik yakunlangandan keyin)
-        </item>
-        <item>*171*128*010100180</item>
-        <item>@drawable/mobi_30</item>
-    </string-array>
-
-    <string-array name="tariff_mobi_40">
-        <item>Mobi 40</item>
-        <item>40 000/2 000 so\‘m oylik/kunlik abonent to\‘lovi, 1 200/40 daqiqa (oyiga/kuniga) O\‘zbekiston bo\‘yicha chiquvchi qo\‘ng\‘iroqlarga,6 000/200 MB (oyiga/kuniga),
-1 200/40 SMS (oyiga/kuniga),O\'zbekiston bo\'yicha qo\'ng\'iroqlarning bir daqiqasi 42,10 so\‘m O\’zbekistonning boshqa mobil operatorlari abonentlariga (oyiga 1 200 daqiqalik yoki kuniga 40 daqiqalik limit yakunlangandan keyin),
-42,10 so\‘m Shahar raqamlariga (oyiga 1 200 daqiqalik yoki kuniga 40 daqiqalik limit yakunlangandan keyin), O\'zbekiston bo\'yicha 1 ta SMS-xabar 0 so\‘m Kiruvchi SMS-xabar,
-            42,10 so\‘m Chiquvchi SMS-xabarlar – Mobiuz abonentlariga (oyiga 1 200 SMS yoki kuniga 40 SMS\’lik limit yakunlangandan keyin), 42,10 so\‘m Chiquvchi SMS-xabarlar – O\’zbekistonning boshqa mobil operatorlari abonentlarga (oyiga 1 200 SMS yoki kuniga 40 SMS\’lik limit yakunlangandan keyin),
-631,5 so\‘m Chiquvchi xalqaro SMS-xabarlar, Internetning 1 MB trafigi 126,31 so\‘m,
-Internetning 1 MB trafigi (oyiga 6 000 MB yoki kuniga 200 MB yakunlangandan keyin).
-        </item>
-        <item>*171*122*010100180</item>
-        <item>@drawable/mobi_40</item>
-    </string-array>
-
-    <string-array name="tariff_mobi_50">
-        <item>Mobi 50</item>
-        <item>50 000 so\‘m-Abonent to\‘lovi oyiga,UNLIM-tarmoq ichidagi qo\‘ng\‘iroqlarga,1 500-O\‘zbekiston bo\‘yicha chiquvchi qo\‘ng\‘iroqlarga,8 000MB,
-        1 500SMS,O\'zbekiston bo\'yicha qo\'ng\'iroqlarning bir daqiqasi,84,2 so\‘m-O\’zbekistonning boshqa mobil operatorlari abonentlariga (1 500 daqiqalik limit yakunlangandan keyin),
-        84,2 so\‘m-Shahar raqamlariga (1 500 daqiqalik limit yakunlangandan keyin),O\'zbekiston bo\'yicha 1 ta SMS-xabar, 0 so\‘m-Kiruvchi SMS-xabar,
-        84,2 so\‘m-Chiquvchi SMS-xabarlar – UMS abonentlariga (1 500 SMS\’lik limit yakunlangandan keyin), 84,2 so\‘m-Chiquvchi SMS-xabarlar – O\’zbekistonning boshqa mobil operatorlari abonentlarga (1 500 SMS lik limit yakunlangandan keyin),
-        631,5 so\‘m- Chiquvchi xalqaro SMS-xabarlar, Internetning 1 MB trafigi,421,04 so\‘m-Internetning 1 MB trafigi (8 000 MB\’lik yakunlangandan keyin)
-       </item>
-        <item>*171*129*010100180</item>
-        <item>@drawable/mobi_50</item>
-    </string-array>
-
-    <string-array name="tariff_mobi_70">
-        <item>Mobi 70</item>
-        <item>70 000 so\‘m abonent to\‘lovi, UNLIM tarmoq ichidagi qo\‘ng\‘iroqlarga, 2 500 O\‘zbekiston bo\‘yicha chiquvchi qo\‘ng\‘iroqlarga, 12 000 MB,
-2 500 SMS, O\'zbekiston bo\'yicha qo\'ng\'iroqlarning bir daqiqasi 84,2 so\‘m O\’zbekistonning boshqa mobil operatorlari abonentlariga (2 500 daqiqalik limit yakunlangandan keyin),
-84,2 so\‘m Shahar raqamlariga (2 500 daqiqalik limit yakunlangandan keyin), O\'zbekiston bo\'yicha 1 ta SMS-xabar 0 so‘m, Kiruvchi SMS-xabar, 84,2 so‘m Chiquvchi SMS-xabarlar – UMS abonentlariga (2 500 SMS\’lik limit yakunlangandan keyin),
-84,2 so\‘m Chiquvchi SMS-xabarlar – O\’zbekistonning boshqa mobil operatorlari abonentlarga (2 500 SMS lik limit yakunlangandan keyin), 631,5 so\‘m Chiquvchi xalqaro SMS-xabarlar,
-Internetning 1 MB trafigi 421,04 so\‘m, Internetning 1 MB trafigi (12 000 MB\’lik yakunlangandan keyin).
-
-        </item>
-        <item>*171*131*010100180</item>
-        <item>@drawable/mobi_70</item>
-    </string-array>
-
-    <string-array name="tariff_mobi_90">
-        <item>Mobi 90</item>
-        <item>90 000 so\‘m abonent to\‘lovi, 3 500 O\‘zbekiston bo\‘yicha chiquvchi qo\‘ng\‘iroqlarga, 18 000 MB, 3 500 SMS, O\'zbekiston bo\'yicha qo\'ng\'iroqlarning bir daqiqasi 84,2 so\‘m O\’zbekistonning boshqa mobil operatorlari abonentlariga (3 500 daqiqalik limit yakunlangandan keyin),
-84,2 so\‘m Shahar raqamlariga (3 500 daqiqalik limit yakunlangandan keyin), O\'zbekiston bo\'yicha 1 ta SMS-xabar, 0 so\‘m Kiruvchi SMS-xabar, 84,2 so\‘m Chiquvchi SMS-xabarlar – UMS abonentlariga (3 500 SMS\’lik limit yakunlangandan keyin),
-84,2 so‘m Chiquvchi SMS-xabarlar – O’zbekistonning boshqa mobil operatorlari abonentlarga (3 500 SMS lik limit yakunlangandan keyin), 631,5 so‘m Chiquvchi xalqaro SMS-xabarlar, Internetning 1 MB trafigi,
-421,04 so\‘m Internetning 1 MB trafigi (18 000 MB\’lik yakunlangandan keyin).
-
-        </item>
-        <item>*171*132*010100180</item>
-        <item>@drawable/mobi_90</item>
-    </string-array>
-
-    <string-array name="tariff_mobi_110">
-        <item>Mobi 110</item>
-        <item>110 000 so\'m Abonent to\'lovi oyiga, UNLIM O\'zbekiston bo\'yicha chiquvchi qo\'ng\'iroqlarga, 25 000MB, 5 000SMS, O\'zbekiston bo\'yicha qo\'ng\'iroqlarning bir daqiqasi, O\'zbekiston bo\'yicha 1 ta SMS-xabar 0 so\'m, Kiruvchi SMS-xabar 84,2 so\‘m, Chiquvchi SMS-xabarlar – UMS abonentlariga (5 000 SMS lik limit yakunlangandan keyin)-84,2 so\‘m, Chiquvchi SMS-xabarlar – O\’zbekistonning boshqa mobil operatorlari abonentlarga (5 000 SMS lik limit yakunlangandan keyin)-631,5 so\‘m, Chiquvchi xalqaro SMS-xabarlar*, Internetning 1 MB trafigi-421,04 so\‘m Internetning 1 MB trafigi (25 000 MB yakunlangandan keyin)
-
-        </item>
-
-        <item>*171*133*010100180</item>
-        <item>@drawable/mobi_110</item>
-    </string-array>
-
-    <string-array name="tariff_mobi_150">
-        <item>Mobi 150</item>
-        <item>Oyiga 150 000 so\'m - UNLIM O\'zbekistondagi barcha yo\'nalishlarga qo\'ng\'iroqlar, 50 000 MB uyali Internet, 10000 SMS. O\'zbekiston bo\'yicha SMS
-            xabar 0 so\'m Kiruvchi SMS-xabar, 84.2 so\'m UMS tarmog\'idagi abonentlarga chiquvchi SMS-xabarlar (10000 SMS to\'plamdan yuqori) 84,2 sum
-            O\'zbekistonning boshqa operatorlarining mobil tarmoqlari abonentlariga chiquvchi SMS-xabarlar (10000 SMS to\'plamidan tashqari) 631.5 so\'m chiquvchi xalqaro
-            SMS-xabarlar * 1 Mb trafik uchun Internet 421.04 so\'m oyiga 50 000 MB limitdan oshgan 1 MB Internet-trafik
-
-        </item>
-        <item>*171*134*010100180</item>
-        <item>@drawable/mobi_150</item>
-    </string-array>
-
-    <string-array name="tariff_yorqin">
-        <item>Yorqin</item>
-        <item>60 000 so‘m / oy - 1000 daqiqa O‘zbekiston bo‘yicha chiquvchi qo‘ng‘iroqlarga, 10000 MB Mobil internet, 1000 SMS, 0 so\'m kirish qo\'ng\'iroqlari.
-            126,31 so‘m UMS abonentlariga (1000 daqiqalik limit yakunlangandan keyin), 126,31 so‘m
-            O‘zbekistonning boshqa mobil operatorlari abonentlariga (1000 daqiqalik limit yakunlangandan keyin),
-            126,31 so‘m Shahar raqamlariga (1000 daqiqalik limit yakunlangandan keyin). 0,00 so\'m Kiruvchi SMS-xabar,
-            84,2 so‘m Chiquvchi SMS-xabarlar – UMS abonentlariga (1000 SMS limit yakunlangandan keyin), 84,2 so‘m Chiquvchi SMS-xabarlar – O‘zbekistonning
-            boshqa mobil operatorlari abonentlarga (1000 SMS limit yakunlangandan keyin), 631,5 so‘m Chiquvchi SMS-xabarlar – O‘zbekistonning boshqa mobil
-            operatorlari abonentlarga (1000 SMS limit yakunlangandan keyin). 421 so‘m 1 MB Internet-trafik uchun
-            (10000 MB yakunlangandan keyin).
-
-        </item>
-        <item>*171*113*010100180</item>
-        <item>@drawable/yorqin_ic</item>
-    </string-array>
-
-    <string-array name="tariff_chilla_lite">
-        <item>Chilla Lite</item>
-        <item>20 000 so‘m / oy - 3000 daqiqa O‘zbekiston bo‘yicha chiquvchi qo‘ng‘iroqlarga, 200 MB Mobil internet, 100 SMS, 0 so\'m kirish qo\'ng\'iroqlari.
-            84,2 so‘m O‘zbekistonning boshqa mobil operatorlari abonentlariga (3 000 daqiqalik to‘plamdan oshganda),
-            84,2 so‘m Shahar tarmog‘i raqamlariga (3 000 daqiqalik to‘plamdan oshganda). 0 so‘m Kiruvchi SMS-xabar,
-            84,2 so‘m UMS tarmog‘idagi abonentlarga chiquvchi SMS-xabar (to‘plamda berilgan 100ta SMSdan oshganda),
-            84,2 so‘m Boshqa mobil aloqa operatorlari tarmog‘idagi abonentlarga chiquvchi SMS-xabar (to‘plamda berilgan 100ta SMSdan oshganda),
-            631,5 so‘m Chiquvchi xalqaro SMS-xabarlar. 421,04 so‘m
-            1 Mb internet-trafik (to‘plamdagi 200 Megabaytdan oshganda)
-
-        </item>
-        <item>*171*124*010100180</item>
-        <item>@drawable/chilla</item>
-    </string-array>
-    <string-array name="tariff_omad">
-        <item>Omad</item>
-        <item>12 000 – so\‘m Abonent to\‘lovi oyiga,400 daqiqa O\‘zbekiston bo\‘yicha chiquvchi qo\‘ng\‘iroqlarga,50MB,50SMS,
-O\'zbekiston bo\'yicha qo\'ng\'iroqlarning bir daqiqasi,12 so\‘m UMS abonentlariga (400 daqiqalik limit yakunlangandan keyin),12 so\‘m O\’zbekistonning boshqa mobil operatorlari abonentlariga (400 daqiqalik limit yakunlangandan keyin)
-12 so\‘m Shahar raqamlariga (400 daqiqalik limit yakunlangandan keyin), O\'zbekiston bo\'yicha 1 ta SMS-xabar, 0,00 so\‘m Kiruvchi SMS-xabar,12 so\‘m Chiquvchi SMS-xabarlar – UMS abonentlariga (50 SMS limit yakunlangandan keyin),
-12 so\‘m Chiquvchi SMS-xabarlar – O\’zbekistonning boshqa mobil operatorlari abonentlarga (50 SMS limit yakunlangandan keyin),
-631,5 so\‘m* Chiquvchi xalqaro SMS-xabarlar*,Internetning 1 MB trafigi, 12 so\‘m 1 MB Internet-trafik uchun (50 MB yakunlangandan keyin)
-
-        </item>
-        <item>*171*043*010100180</item>
-        <item>@drawable/omad</item>
-    </string-array>
-
-    <string-array name="tariff_terminal">
-        <item>TERMINAL</item>
-        <item>Tarifga kiritilgan 200MB internet paket. 12632 so‘m Abonеnt to\'lovi (oyiga).
-            O\'zbekiston bo\'yicha qo\'ng\'iroqlarning bir daqiqasi 126,31 so\'m UMS abonentlariga 210,52 so\'m
-            O\'zbekistonning boshqa mobil operatorlari abonentlariga 210,52 so\'m Shahar raqamlariga.
-            0 so\'m Kiruvchi SMS-xabar, 84,21 so\'m Chiquvchi SMS-xabarlar – UMS abonentlariga 84,21 so\'m Chiquvchi SMS-xabarlar – O’zbekistonning
-            boshqa mobil operatorlari abonentlarga. 631.55 so\'m Chiquvchi xalqaro SMS-xabarlar. 421 so\'m 1 MB Internet-trafik uchun (oylik 200 MB limitdan ortganda).
-
-
-        </item>
-        <item>*171*112*010100180*1</item>
-        <item>@drawable/icon_terminal</item>
-    </string-array>
-
-    <string-array name="tariff_shodlik">
-        <item>Shodlik</item>
-        <item>20 000 so\‘m Abonent to\‘lovi oyiga, 1000 daqiqa chiquvchi qo\‘ng\‘iroqlar uchun (UMS va O\‘zbekistonning boshqa mobil operatorlari tarmoqlariga hamda shahar raqamlariga),
-1000SMS, O\'zbekiston bo\'yicha qo\'ng\'iroqlarning bir daqiqasi, 126,31 so\‘m UMS abonentlariga (1000 daqiqalik limit yakunlangandan keyin),
-126,31 so\‘m O\’zbekistonning boshqa mobil operatorlari abonentlariga (1000 daqiqalik limit yakunlangandan keyin), 126,31 so\‘m O\’zbekistonning boshqa mobil operatorlari abonentlariga (1000 daqiqalik limit yakunlangandan keyin),
-O\'zbekiston bo\'yicha 1 ta SMS-xabar, 0 so\‘m Kiruvchi SMS-xabar,
-84,21 so\‘m Chiquvchi SMS-xabarlar – UMS abonentlariga (1000 ta SMS yakunlangandan keyin), 84,21 so\‘m Chiquvchi SMS-xabarlar – UMS abonentlariga (1000 ta SMS yakunlangandan keyin),
-84,21 so\‘m Chiquvchi xalqaro SMS-xabarlar*
-Internetning 1 MB trafigi, 336,83 сум 1 MB Internet-trafik uchun
-
-        </item>
-        <item>*171*125*010100180</item>
-        <item>@drawable/shodlik</item>
-    </string-array>
-
-
-    <string-array name="tariff_gap">
-        <item>Gap yo\'q</item>
-        <item>"Abonent to‘lovi oyiga/kuniga 35 000 /1750 so‘m; 8000/267 MB Mobil internet oyiga/kuniga,
-O'zbekiston bo'yicha qo'ng'iroqlarning bir daqiqasi, 12 so‘m MOBIUZ abonentlariga, 12 so‘m O‘zbekistonning boshqa mobil operatorlariga
-12 so‘m Shahar raqamlariga, O'zbekiston bo'yicha 1 ta SMS-xabar, 0 so‘m Kiruvchi SMS-xabar, 12 so‘m Chiquvchi SMS-xabarlar – Mobiuz abonentlariga,
-12 so‘m Chiquvchi SMS-xabarlar – O‘zbekistonning boshqa mobil operatorlari abonentlariga, 631,5 so‘m Chiquvchi xalqaro SMS-xabarlar*
-Internetning 1 MB trafigi 12 so‘m, Internetning 1 MB trafigi (oyiga 8000 MB tugagandan keyin)"
-        </item>
-        <item>*171*100*010100180*1</item>
-        <item>@drawable/gap</item>
-    </string-array>
-
-
-    <!--Yangiliklar-->
-
-
-
-
-
-    <string name="tiklash_title_news">«Raqamni tiklash» xizmatidan uydan chiqmasdan turib foydalaning!</string>
-    <string name="tiklash_text_news">"Endilikda Mobiuz abonentlarida o’z raqamlarini uydan chiqmasdan turib tiklash imkoniyati borligini, ma'lum qilishdan mamnunmiz.
-Buning uchun, quyidagi raqamlar bo’yicha qo’ng’iroq qilish va operatorga kerak bo’lgan ma’lumotlarni berish zarur:
-+998 (97) 130-09-09 – jismoniy va yuridik shaxslar uchun
-0890 – Mobiuz raqamidan qo’ng’iroq qiladigan jismoniy shaxslar uchun
-0990 – Mobiuz raqamidan qo’ng’iroq qiladigan yuridik shaxslar uchun
-Yaqin vaqt ichida Sizni Mobiuz kompaniyasidan yangi imkoniyatlar kutmoqda. Yangiliklarni kuzatib boring!"
-    </string>
-
-
- <string name="tarif_title_news"> «O’qituvchi 1» va «O’qituvchi 2» tarif rejalarining yangilanishi!</string>
-    <string name="tarif_text_news">"   Chop etish versiyasi
-    Hurmatli abonentlar!
-    O’qituvchi toifasidagi tariflarning yangilanishi haqida xabar berishdan mamnunmiz. Endilikda «O’qituvchi 1» tarif rejasiga 2000 MB internet-to’plam kiritildi, «O’qituvchi 2» tarif rejasidagi internet-to’plamning hajmi esa 5000 MBni tashkil etadi."
-    </string>
-
-
-    <string name="TV_title_news">iTV’dan “Mobil TV” xizmati!</string>
-    <string name="TV_text_news">"   Chop etish versiyasi
-
-    Hurmatli abonentlar!
-
-“Mobil TV” xizmati endi iTV ilovasi doirasida ham ishlashini mamnuniyat bilan e’lon qilamiz!
-
-Minglab horijiy va mahalliy film, serial va ko‘rsatuvlar, har bir foydalanuvchining didiga mos keladigan telekanallar sizga ajoyib kayfiyat taqdim etadi!
-     </string>
-
-
-    <string name="service_purchase">Ulanish</string>
-    <string name="service_cancel">Bekor qilish</string>
-    <string name="check_active_services">Tekshirish</string>
-    <string name="less_tariff">Qisqacha</string>
-
-    <string name="buy">Olish</string>
-
-    <string name="aksiya">Aksiya (1+25% bonus)! Oylik internet-to\'plamlar sovg\'a!
-2020-уil  6-iyul sanasidan 6-avgustgacha</string>
-
-    <string name="sms">sms</string>
-
-    <string name="aksiya_sms">"1+1 Aksiyasi "Daqiqalar to\'plami" xarid qilinganda-xuddi shunday hajmdagi SMS to\'plam sovg\'a 20.07.2020 dan  20.09.2020 gacha"</string>
-
+    <string name="service_purchase">Подключить</string>
+    <string name="service_cancel">Отключить</string>
+    <string name="dialog_permission_settings">Нужен доступ на вызов</string>
+    <string name="confirm_ask">Вы действительно хотите перейти на тарифный план:</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_internet">Internet</string>
+    <string name="text_minutes_sms">Daqiqa/SMS</string>
+    <string name="text_rate">Tariflar</string>
+    <string name="text_service">Xizmatlar</string>
+    <string name="text_balance">Balans</string>
+    <string name="text_more">Foydali</string>
+    <string name="text_load_data">Maʼlumotlar yuklanmoqda</string>
+    <string name="text_data_loaded">Maʼlumotlar yuklandi</string>
+    <string name="text_sum">so‘m</string>
+    <string name="text_mb">MB</string>
+    <string name="text_day">kunga</string>
+    <string name="text_minute">Daqiqalar</string>
+    <string name="text_minute_small">daqiqa</string>
+    <string name="text_config">Sozlanmalar</string>
+    <string name="text_get_configs">Mobil internet sozlamalarni olish</string>
+    <string name="text_on_net">Mobil internet xizmatini yoqish</string>
+    <string name="text_off_net">Mobil internet xizmatini o‘chirish</string>
+    <string name="text_on_on_net">OnNet to‘plamini o‘chirish</string>
+    <string name="text_packets">Paketlar</string>
+    <string name="text_night_packets">Tungi paketlar</string>
+    <string name="text_night_dirve">Tungi Drive</string>
+    <string name="text_day_packets">Kunlik paketlar</string>
+    <string name="text_week_packets">Haftalik paketlar</string>
+    <string name="sure_confirm">Siz rozimisiz?</string>
+    <string name="cancel">Orqaga</string>
+    <string name="yes_dialog">Xa</string>
+    <string name="confirm_service_ask">Quyidagi xizmatni yoqishga rozimisiz?</string>
+    <string name="text_sms">SMS</string>
+    <string name="text_check_packets">Qoldiqni tekshirish</string>
+    <string name="text_moth_pay">Oylik to‘lov</string>
+    <string name="text_over">O‘tish</string>
+    <string name="text_push_minutes">Chiquvchi daqiqalar</string>
+    <string name="text_traffic_count">Trafik hajmi</string>
+    <string name="confirm_cancel_service_ask">Вы действительно хотите отключить данную услугу?</string>
+    <string name="text_telegram_chanel">Telegram kanal</string>
+    <string name="text_wallet">Oxirgi to‘lov</string>
+    <string name="text_expenses">Mening xarajatlarim</string>
+    <string name="text_residue">Internet qoldig‘i</string>
+    <string name="text_my_number">Mening raqamim</string>
+    <string name="text_my_all_numbers">Mening barcha raqamlarim</string>
+    <string name="text_check_services">Yoqilgan xizmatlarni tekshirish</string>
+    <string name="text_other_apps">Bizning boshqa dasturlarimiz</string>
+    <string name="text_review">Baholash</string>
+    <string name="text_buy">Olish</string>
+    <string name="text_cabinet">Kabinet</string>
+    <string name="text_change_lang">RUS</string>
+    <string name="text_err_download">Yuklash paytida xatolik yuz berdi</string>
+    <string name="text_app_loading">Ilova yuklanmoqda…</string>
 
 </resources>

@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="uz.tillo.umsdealer.ui.activity.HomeActivity">
+    android:background="@android:color/white"
+    tools:context="com.range.mobiuz.ui.activity.HomeActivity">
 
     <fragment
         android:id="@+id/nav_host_fragment"
