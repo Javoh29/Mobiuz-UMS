@@ -28,10 +28,6 @@ class HomeActivity : AppCompatActivity() {
         ActivityCompat.requestPermissions(
                 this,
                 arrayOf(Manifest.permission.CALL_PHONE,
-                        Manifest.permission.WRITE_EXTERNAL_STORAGE,
-                        Manifest.permission.READ_EXTERNAL_STORAGE,
-                        Manifest.permission.WRITE_SYNC_SETTINGS,
-                        Manifest.permission.REQUEST_INSTALL_PACKAGES,
                         Manifest.permission.READ_PHONE_STATE
                 ),
                 1

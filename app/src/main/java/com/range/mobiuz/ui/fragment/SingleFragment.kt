@@ -30,6 +30,7 @@ class SingleFragment(private val index: Int, private val isSMS: Boolean) : Scope
 
     private var dialog: Dialog? = null
     private var btnOk: ElasticButton? = null
+    private var dealerCode: String? = null
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -67,6 +68,7 @@ class SingleFragment(private val index: Int, private val isSMS: Boolean) : Scope
         }
 
         loadData()
+        loadCode()
     }
 
     private fun loadData() = launch {
@@ -81,7 +83,13 @@ class SingleFragment(private val index: Int, private val isSMS: Boolean) : Scope
                 bindPacketsUI(it)
             })
         }
+    }
 
+    private fun loadCode() = launch {
+        lazyDeferred { mobiuzRepository.getDealerCode() }.value.await().observe(viewLifecycleOwner, Observer {
+            if (it == null) return@Observer
+            dealerCode = it.code
+        })
     }
 
     private fun bindPacketsUI(list: List<PacketModel>) {
@@ -109,21 +117,23 @@ class SingleFragment(private val index: Int, private val isSMS: Boolean) : Scope
     }
 
     override fun itemClick(code: String) {
-        dialog?.show()
-        btnOk?.setOnClickListener {
-            if (isSMS){
-                if (index == 1){
-                    ussdCall(code, it.context)
-                }else{
-                    val ussd = UssdCodes.netPackets + code + "*1" + UssdCodes.dealerCode
+        if (dealerCode != null) {
+            dialog?.show()
+            btnOk?.setOnClickListener {
+                if (isSMS){
+                    if (index == 1){
+                        ussdCall(code, it.context)
+                    }else{
+                        val ussd = UssdCodes.netPackets + code + "*1" + dealerCode + UssdCodes.encodedHash
+                        ussdCall(ussd, it.context)
+                    }
+                }else {
+                    val ussd = UssdCodes.netPackets + code + dealerCode + UssdCodes.encodedHash
                     ussdCall(ussd, it.context)
                 }
-            }else {
-                val ussd = UssdCodes.netPackets + code + UssdCodes.dealerCode
-                ussdCall(ussd, it.context)
+                dialog?.dismiss()
             }
-            dialog?.dismiss()
-        }
+        } else loadCode()
     }
 }
 

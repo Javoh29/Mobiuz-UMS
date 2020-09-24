@@ -40,11 +40,11 @@ class ServiceAdapter(private val list: List<ServiceModel>, private val sAction: 
     @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: ServiceViewHolder, position: Int) {
         if (sAction.getLang()) {
-            holder.tvTitle.text = list[position].nameRu
-            holder.tvInfo.text = list[position].defRu
-        } else {
             holder.tvTitle.text = list[position].name
             holder.tvInfo.text = list[position].def
+        } else {
+            holder.tvTitle.text = list[position].nameRu
+            holder.tvInfo.text = list[position].defRu
         }
 
         if (position in 3..6){

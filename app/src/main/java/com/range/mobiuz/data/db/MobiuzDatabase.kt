@@ -8,8 +8,8 @@ import com.range.mobiuz.data.db.entity.*
 
 
 @Database(
-        entities = [LangModel::class, PacketModel::class, MinutesModel::class, RateModel::class, ServiceModel::class],
-        version = 4
+        entities = [LangModel::class, PacketModel::class, MinutesModel::class, RateModel::class, ServiceModel::class, DealerCode::class],
+        version = 6
 )
 abstract class MobiuzDatabase : RoomDatabase() {
 

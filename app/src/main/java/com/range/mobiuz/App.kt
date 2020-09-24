@@ -1,8 +1,6 @@
 package com.range.mobiuz
 
 import android.app.Application
-import com.downloader.PRDownloader
-import com.downloader.PRDownloaderConfig
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.x.androidXModule
@@ -30,10 +28,6 @@ class App: Application(), KodeinAware {
 
     override fun onCreate() {
         super.onCreate()
-        val config = PRDownloaderConfig.newBuilder()
-                .setDatabaseEnabled(true)
-                .build()
-        PRDownloader.initialize(applicationContext, config)
     }
 
     companion object {

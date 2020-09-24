@@ -29,6 +29,7 @@ class RateFragment : ScopedFragment(R.layout.fragment_rate), RateAction {
 
     private var dialog: Dialog? = null
     private var btnOk: ElasticButton? = null
+    private var dealerCode: String? = null
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -52,6 +53,7 @@ class RateFragment : ScopedFragment(R.layout.fragment_rate), RateAction {
 
         avi.show()
         loadData()
+        loadCode()
     }
 
     private fun loadData() = launch {
@@ -61,18 +63,27 @@ class RateFragment : ScopedFragment(R.layout.fragment_rate), RateAction {
         })
     }
 
+    private fun loadCode() = launch {
+        lazyDeferred { mobiuzRepository.getDealerCode() }.value.await().observe(viewLifecycleOwner, Observer {
+            if (it == null) return@Observer
+            dealerCode = it.code
+        })
+    }
+
     private fun bindUi(list: List<RateModel>){
         recyclerRate.adapter = RateAdapter(list, this)
         avi.hide()
     }
 
     override fun itemClick(code: String) {
-        dialog?.show()
-        btnOk?.setOnClickListener {
-            val ussd = UssdCodes.netPackets + code + UssdCodes.dealerCode
-            ussdCall(ussd, it.context)
-            dialog?.dismiss()
-        }
+        if (dealerCode != null) {
+            dialog?.show()
+            btnOk?.setOnClickListener {
+                val ussd = UssdCodes.netPackets + code + dealerCode + UssdCodes.encodedHash
+                ussdCall(ussd, it.context)
+                dialog?.dismiss()
+            }
+        } else loadCode()
     }
 
     override fun getLang(): Boolean {

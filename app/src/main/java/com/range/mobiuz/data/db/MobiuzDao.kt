@@ -55,4 +55,13 @@ interface MobiuzDao {
     @Query("DELETE FROM service_table")
     fun deleteService()
 
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun upsertCode(model: DealerCode)
+
+    @Query("SELECT * from dealer_code_table")
+    fun getCode(): LiveData<DealerCode>
+
+    @Query("DELETE FROM dealer_code_table")
+    fun deleteCode()
+
 }

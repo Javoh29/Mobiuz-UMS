@@ -26,6 +26,9 @@ interface ApiService {
     @GET("version.json")
     suspend fun getVersionAsync(): Response<VersionModel>
 
+    @GET("dealerCode.json")
+    suspend fun getDealerCode(): Response<DealerCode>
+
     companion object {
         operator fun invoke(): ApiService {
 
