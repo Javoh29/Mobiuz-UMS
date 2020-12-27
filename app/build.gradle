@@ -13,9 +13,10 @@ android {
         applicationId 'uz.tillo.umsdealer'
         minSdkVersion 19
         targetSdkVersion 30
-        versionName '1.8.7'
+        versionName '1.9.0'
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
-        versionCode 34
+        versionCode 37
+        multiDexEnabled true
 
     }
     buildTypes {
@@ -42,16 +43,17 @@ android {
 }
 
 dependencies {
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'androidx.core:core-ktx:1.3.1'
+    implementation 'androidx.core:core-ktx:1.3.2'
     implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'com.google.android.material:material:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'com.android.support:multidex:1.0.3'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    testImplementation 'junit:junit:4.13'
+    testImplementation 'junit:junit:4.13.1'
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'at.blogc:expandabletextview:1.0.5'
     implementation 'org.jsoup:jsoup:1.12.1'
@@ -67,7 +69,7 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
 
     // Kotlin Android Coroutines
-    def kotlin_coroutines = '1.3.0'
+    def kotlin_coroutines = '1.3.7'
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlin_coroutines"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlin_coroutines"
 
@@ -76,7 +78,7 @@ dependencies {
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
     implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
     implementation 'com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2'
-    implementation 'com.squareup.okhttp3:logging-interceptor:4.4.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.8.1'
 
 
     // Room
@@ -88,6 +90,11 @@ dependencies {
     def kodein_version = '6.5.5'
     implementation "org.kodein.di:kodein-di-generic-jvm:$kodein_version"
     implementation "org.kodein.di:kodein-di-framework-android-x:$kodein_version"
+
+    // Image Loader
+    def glide = '4.11.0'
+    implementation "com.github.bumptech.glide:glide:$glide"
+    kapt "com.github.bumptech.glide:compiler:$glide"
 
     // Preference
     implementation "androidx.preference:preference-ktx:1.1.1"

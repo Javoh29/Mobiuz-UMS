@@ -1,6 +1,7 @@
 package com.range.mobiuz.data.repository
 
 import androidx.lifecycle.LiveData
+import com.range.mobiuz.App.Companion.sale
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import com.range.mobiuz.data.db.MobiuzDao
@@ -44,16 +45,40 @@ class MobiuzRepositoryImpl(
         }
     }
 
-    override suspend fun getVersionsAsync(): VersionModel? {
-        val response = apiService.getVersionAsync()
-        return if (response.isSuccessful) {
-            response.body()
-        } else null
+    override suspend fun getSale(): SaleModel? {
+        return withContext(Dispatchers.IO) {
+            return@withContext mobiuzDao.getSale()
+        }
     }
+
+    override suspend fun getBanners(): LiveData<List<BannerModel>> {
+        return withContext(Dispatchers.IO) {
+            return@withContext mobiuzDao.getBanner()
+        }
+    }
+
 
     override suspend fun fetchingAllData(): Boolean {
         var isLoaded = true
         try {
+            val resBanner = apiService.getBanners()
+            if (resBanner.isSuccessful) {
+                resBanner.body()!!.forEach {
+                    mobiuzDao.upsertBanner(it)
+                }
+            } else isLoaded = false
+
+            val resSale = apiService.getSaleAsync()
+            if (resSale.isSuccessful) {
+                if (resSale.body()?.sale != "no") {
+                    sale = resSale.body()
+                    mobiuzDao.upsertSale(resSale.body()!!)
+                } else {
+                    sale = null
+                    mobiuzDao.deleteSale()
+                }
+            } else isLoaded = false
+
             val resCode = apiService.getDealerCode()
             if (resCode.isSuccessful) {
                 mobiuzDao.upsertCode(resCode.body()!!)
@@ -94,7 +119,7 @@ class MobiuzRepositoryImpl(
             if (isLoaded) {
                 unitProvider.saveLoadDate()
             }
-        }catch (e: Exception) {
+        } catch (e: Exception) {
             isLoaded = false
         }
         return isLoaded

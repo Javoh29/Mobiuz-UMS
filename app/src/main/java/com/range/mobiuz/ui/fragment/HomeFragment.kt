@@ -1,89 +1,60 @@
 package com.range.mobiuz.ui.fragment
 
+import android.Manifest
 import android.annotation.SuppressLint
 import android.app.Dialog
-import android.app.ProgressDialog
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Bundle
-import android.os.Environment
 import android.view.View
 import android.view.Window
-import android.widget.Toast
 import androidx.appcompat.widget.AppCompatTextView
-import androidx.core.content.FileProvider
+import androidx.core.app.ActivityCompat
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
-import androidx.viewpager2.widget.ViewPager2
 import kotlinx.android.synthetic.main.fragment_home.*
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import org.kodein.di.generic.instance
-import com.range.mobiuz.App.Companion.isLoaded
-import com.range.mobiuz.BuildConfig
+import com.range.mobiuz.App.Companion.sale
 import com.range.mobiuz.R
 import com.range.mobiuz.data.db.entity.BannerModel
-import com.range.mobiuz.data.db.entity.LangModel
-import com.range.mobiuz.data.db.entity.VersionModel
 import com.range.mobiuz.data.repository.MobiuzRepository
 import com.range.mobiuz.ui.adapter.AdsViewAdapter
 import com.range.mobiuz.ui.base.ScopedFragment
-import com.range.mobiuz.utils.DownloadDialog
 import com.range.mobiuz.utils.UssdCodes
 import com.range.mobiuz.utils.lazyDeferred
 import com.range.mobiuz.utils.ussdCall
-import java.io.File
-import java.text.SimpleDateFormat
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
 import java.util.*
-import kotlin.collections.ArrayList
 
 class HomeFragment : ScopedFragment(R.layout.fragment_home) {
 
     private val mobiuzRepository: MobiuzRepository by instance()
     private var timer: TimerTask? = null
-    private var dialog = DownloadDialog()
     @SuppressLint("SimpleDateFormat")
-    private var simpleDate = SimpleDateFormat("dd.MM.yy")
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         bindUI()
-        loadData()
+        bindSale()
+        requestPermission()
     }
 
-    @SuppressLint("SimpleDateFormat")
-    private fun loadData() = launch(Dispatchers.IO) {
-        if (unitProvider.getSaveDate() != simpleDate.format(Date())){
-            if (unitProvider.isOnline()) {
-                bindToast(lazyDeferred { mobiuzRepository.fetchingAllData() }.value.await())
-            } else dialog.dismiss()
-            isLoaded = false
-        }else dialog.dismiss()
-    }
 
-    private fun bindUI() {
-        dialog.isCancelable = false
-        dialog.show(activity?.supportFragmentManager!!, "DownloadDialog")
-        val list: ArrayList<BannerModel> = ArrayList()
-        list.add(BannerModel(image = R.drawable.img_banner1, url = "https://mobi.uz/uz/messaging/minutes/16993/"))
-        list.add(BannerModel(image = R.drawable.img_banner2, url = "https://mobi.uz/uz/internet/mobile_internet/9837/"))
-        list.add(BannerModel(image = R.drawable.img_banner3, url = "https://mobi.uz/uz/tariff/liketalk/21158/"))
-        list.add(BannerModel(image = R.drawable.img_banner4, url = "https://mobi.uz/uz/support/blocking_sim/21106/"))
-        list.add(BannerModel(image = R.drawable.img_banner5, url = "https://mobi.uz/uz/tariff/liketalk/20349/"))
-        list.add(BannerModel(image = R.drawable.img_banner6, url = "https://mobi.uz/uz/tariff/liketalk/20025/"))
-        list.add(BannerModel(image = R.drawable.img_banner7, url = "https://mobi.uz/uz/tariff/liketalk/20347/"))
-        list.add(BannerModel(image = R.drawable.img_banner8, url = "https://mobi.uz/uz/tariff/liketalk/20033/"))
-        list.add(BannerModel(image = R.drawable.img_banner9, url = "https://mobi.uz/uz/tariff/liketalk/20244/"))
-        adsViewPager.adapter = AdsViewAdapter(list)
-        adsViewPager.currentItem = 1
-        adsViewPager.clipToPadding = false
-        adsViewPager.clipChildren = false
-        adsViewPager.offscreenPageLimit = 3
-        adsViewPager.getChildAt(0).overScrollMode = RecyclerView.OVER_SCROLL_NEVER
+    private fun bindUI() = launch {
+        lazyDeferred { mobiuzRepository.getBanners() }.value.await().observe(viewLifecycleOwner, {
+            if (it == null) return@observe
+            if (it.isNotEmpty()) {
+                requireActivity().runOnUiThread {
+                    bindBanner(it)
+                }
+            } else return@observe
+        })
 
         if (unitProvider.getLang()) {
             imgLang.setImageResource(R.drawable.ic_rus)
@@ -91,26 +62,6 @@ class HomeFragment : ScopedFragment(R.layout.fragment_home) {
             imgLang.setImageResource(R.drawable.ic_uzb)
         }
 
-        val compositePagerTransformer = CompositePageTransformer()
-        compositePagerTransformer.addTransformer(MarginPageTransformer(20))
-        compositePagerTransformer.addTransformer(ViewPager2.PageTransformer { page, position ->
-            val r: Float = 1 - kotlin.math.abs(position)
-            page.scaleY = 0.85f + r * 0.25f
-        })
-
-        adsViewPager.setPageTransformer(compositePagerTransformer)
-
-        var page = 1
-
-        timer = object : TimerTask() {
-            override fun run() {
-                requireActivity().runOnUiThread {
-                    adsViewPager.currentItem = page % list.size
-                }
-                page++
-            }
-        }
-        Timer().schedule(timer, 0, 7000)
 
         val dialogMore = Dialog(requireContext(), R.style.Theme_AppCompat_Light_Dialog_Alert)
         dialogMore.requestWindowFeature(Window.FEATURE_NO_TITLE)
@@ -199,31 +150,58 @@ class HomeFragment : ScopedFragment(R.layout.fragment_home) {
 
     }
 
-    private fun bindToast(isLoaded: Boolean) {
-        activity?.runOnUiThread {
-            if (isLoaded) {
-                Toast.makeText(requireContext(), getString(R.string.text_data_loaded), Toast.LENGTH_SHORT).show()
-            } else {
-                Toast.makeText(
-                        requireContext(),
-                        "Internet ulanishida nosozlik bor",
-                        Toast.LENGTH_LONG
-                ).show()
+    private fun bindBanner(list: List<BannerModel>) {
+        adsViewPager.adapter = AdsViewAdapter(list)
+        adsViewPager.currentItem = 1
+        adsViewPager.clipToPadding = false
+        adsViewPager.clipChildren = false
+        adsViewPager.offscreenPageLimit = 3
+        adsViewPager.getChildAt(0).overScrollMode = RecyclerView.OVER_SCROLL_NEVER
+
+        val compositePagerTransformer = CompositePageTransformer()
+        compositePagerTransformer.addTransformer(MarginPageTransformer(20))
+        compositePagerTransformer.addTransformer { page, position ->
+            val r: Float = 1 - kotlin.math.abs(position)
+            page.scaleY = 0.85f + r * 0.25f
+        }
+
+        adsViewPager.setPageTransformer(compositePagerTransformer)
+
+        var page = 1
+
+        timer = object : TimerTask() {
+            override fun run() {
+                requireActivity().runOnUiThread {
+                    adsViewPager.currentItem = page % list.size
+                }
+                page++
             }
         }
-        dialog.dismiss()
+        Timer().schedule(timer, 0, 7000)
     }
 
-//    private fun updateConfig(lang: Boolean) {
-//        val dLocale = if (lang) {
-//            Locale("uz", "UZ")
-//        } else Locale("ru", "RU")
-//        val dm = resources.displayMetrics
-//        val conf = resources.configuration
-//        conf.locale = dLocale
-//        resources.updateConfiguration(conf, dm)
-//    }
+    private fun requestPermission() {
+        ActivityCompat.requestPermissions(
+                requireActivity(),
+                arrayOf(Manifest.permission.CALL_PHONE,
+                        Manifest.permission.READ_PHONE_STATE
+                ),
+                1
+        )
+    }
 
+    private fun bindSale() = launch {
+        sale = lazyDeferred { mobiuzRepository.getSale() }.value.await()
+        if (sale != null) {
+            when(sale?.sale) {
+                "1" -> saleInternet.visibility = View.VISIBLE
+                "2" -> saleMinute.visibility = View.VISIBLE
+            }
+            if (sale?.code != "no") {
+                saleRate.visibility = View.VISIBLE
+            }
+        }
+    }
 
     override fun onStop() {
         super.onStop()

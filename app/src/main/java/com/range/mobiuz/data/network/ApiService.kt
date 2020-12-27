@@ -23,11 +23,14 @@ interface ApiService {
     @GET("services.json")
     suspend fun getServicesAsync(): Response<ServiceResponse>
 
-    @GET("version.json")
-    suspend fun getVersionAsync(): Response<VersionModel>
+    @GET("sale.json")
+    suspend fun getSaleAsync(): Response<SaleModel>
 
     @GET("dealerCode.json")
     suspend fun getDealerCode(): Response<DealerCode>
+
+    @GET("banner.json")
+    suspend fun getBanners(): Response<BannerResponse>
 
     companion object {
         operator fun invoke(): ApiService {

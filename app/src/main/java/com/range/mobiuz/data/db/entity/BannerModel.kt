@@ -1,9 +1,16 @@
 package com.range.mobiuz.data.db.entity
 
-import androidx.annotation.Keep
 
-@Keep
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+import com.google.gson.annotations.SerializedName
+
+@Entity(tableName = "banner_table")
 data class BannerModel(
-        val image: Int,
+        @PrimaryKey(autoGenerate = true)
+        var id: Int = 0,
+        @SerializedName("image")
+        val image: String,
+        @SerializedName("url")
         val url: String
 )

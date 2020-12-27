@@ -17,5 +17,7 @@ interface MobiuzRepository {
 
     suspend fun getDealerCode(): LiveData<DealerCode>
 
-    suspend fun getVersionsAsync(): VersionModel?
+    suspend fun getSale(): SaleModel?
+
+    suspend fun getBanners(): LiveData<List<BannerModel>>
 }

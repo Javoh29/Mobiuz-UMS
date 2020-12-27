@@ -126,6 +126,7 @@
     <string name="text_more">Foydali</string>
     <string name="text_load_data">Maʼlumotlar yuklanmoqda</string>
     <string name="text_data_loaded">Maʼlumotlar yuklandi</string>
+    <string name="text_data_loaded_err">Internet ulanishida nosozlik bor</string>
     <string name="text_sum">so‘m</string>
     <string name="text_mb">MB</string>
     <string name="text_day">kunga</string>
@@ -166,5 +167,5 @@
     <string name="text_change_lang">RUS</string>
     <string name="text_err_download">Yuklash paytida xatolik yuz berdi</string>
     <string name="text_app_loading">Ilova yuklanmoqda…</string>
-
+    <string name="text_welcome">Xush kelibsiz!</string>
 </resources>

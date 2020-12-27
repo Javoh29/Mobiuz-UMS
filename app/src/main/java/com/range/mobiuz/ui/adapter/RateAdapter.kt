@@ -4,8 +4,10 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.widget.AppCompatImageView
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.recyclerview.widget.RecyclerView
+import com.range.mobiuz.App.Companion.sale
 import com.skydoves.elasticviews.ElasticCardView
 import com.range.mobiuz.R
 import com.range.mobiuz.data.db.entity.RateModel
@@ -24,6 +26,8 @@ class RateAdapter(private val list: List<RateModel>, private val rAction: RateAc
         val tvMinutes: AppCompatTextView = view.findViewById(R.id.tvMinutes)
         val tvTraffic: AppCompatTextView = view.findViewById(R.id.tvMbCount)
         val cardOver: ElasticCardView = view.findViewById(R.id.cardOver)
+        val saleImage: AppCompatImageView = view.findViewById(R.id.saleItemRate)
+        val list = sale?.code!!.split("|")
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RateViewHolder {
@@ -41,6 +45,14 @@ class RateAdapter(private val list: List<RateModel>, private val rAction: RateAc
         if (rAction.getLang()) {
             holder.tvTitle.text = list[position].nameRu
         } else holder.tvTitle.text = list[position].name
+
+        if (sale != null && sale?.code != "no") {
+            if (holder.list.contains(list[position].code)){
+                holder.saleImage.visibility = View.VISIBLE
+            } else {
+                holder.saleImage.visibility = View.GONE
+            }
+        }
 
         holder.tvMothPrice.text = "${list[position].price} ${holder.tvMothPrice.context.getString(R.string.text_sum)}"
         holder.tvSms.text = "${list[position].sms} ${holder.tvSms.context.getString(R.string.text_sms)}"

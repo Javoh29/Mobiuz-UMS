@@ -128,6 +128,14 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/cardSms">
 
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/saleInternet"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_sale_red"
+                    android:layout_gravity="end"/>
+
                 <androidx.cardview.widget.CardView
                     android:layout_width="70dp"
                     android:layout_height="70dp"
@@ -173,6 +181,14 @@
                 app:layout_constraintTop_toBottomOf="@id/logo"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/cardInternet">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/saleMinute"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_sale_red"
+                    android:layout_gravity="end"/>
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="70dp"
@@ -220,6 +236,14 @@
                 app:layout_constraintTop_toBottomOf="@id/cardSms"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/cardService">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/saleRate"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_sale_red"
+                    android:layout_gravity="end"/>
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="70dp"

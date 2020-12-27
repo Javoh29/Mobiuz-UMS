@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.skydoves.elasticviews.ElasticCardView
 import com.range.mobiuz.R
 import com.range.mobiuz.data.db.entity.BannerModel
@@ -16,6 +18,7 @@ class AdsViewAdapter(private val list: List<BannerModel>): RecyclerView.Adapter<
     class AdsViewHolder(view: View): RecyclerView.ViewHolder(view){
         val imageView: MovingImageView = view.findViewById(R.id.imgAds)
         val cardBanner: ElasticCardView = view.findViewById(R.id.cardBanner)
+        val mView = view;
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AdsViewHolder {
@@ -29,7 +32,10 @@ class AdsViewAdapter(private val list: List<BannerModel>): RecyclerView.Adapter<
     }
 
     override fun onBindViewHolder(holder: AdsViewHolder, position: Int) {
-        holder.imageView.setImageResource(list[position].image)
+        Glide.with(holder.mView)
+                .load(list[position].image)
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .into(holder.imageView)
         holder.cardBanner.setOnClickListener {
             it.context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(list[position].url)))
         }

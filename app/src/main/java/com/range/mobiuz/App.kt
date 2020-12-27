@@ -1,6 +1,9 @@
 package com.range.mobiuz
 
 import android.app.Application
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.multidex.MultiDexApplication
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.x.androidXModule
@@ -8,13 +11,14 @@ import org.kodein.di.generic.bind
 import org.kodein.di.generic.instance
 import org.kodein.di.generic.singleton
 import com.range.mobiuz.data.db.MobiuzDatabase
+import com.range.mobiuz.data.db.entity.SaleModel
 import com.range.mobiuz.data.network.ApiService
 import com.range.mobiuz.data.pravider.UnitProvider
 import com.range.mobiuz.data.pravider.UnitProviderImpl
 import com.range.mobiuz.data.repository.MobiuzRepository
 import com.range.mobiuz.data.repository.MobiuzRepositoryImpl
 
-class App: Application(), KodeinAware {
+class App: MultiDexApplication(), KodeinAware {
     override val kodein: Kodein
         get() = Kodein.lazy {
             import(androidXModule(this@App))
@@ -32,5 +36,6 @@ class App: Application(), KodeinAware {
 
     companion object {
         var isLoaded: Boolean = true
+        var sale: SaleModel? = null
     }
 }

@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import android.view.View
 import android.view.Window
 import androidx.navigation.Navigation
+import com.range.mobiuz.App.Companion.sale
 import com.skydoves.elasticviews.ElasticLayout
 import kotlinx.android.synthetic.main.fragment_internet.*
 import com.range.mobiuz.R
@@ -24,11 +25,51 @@ class InternetFragment : Fragment(R.layout.fragment_internet) {
 
     private fun bindUI(){
         val adapter = FragmentAdapter(childFragmentManager)
-        adapter.addFragment(SingleFragment(0, false), getString(R.string.text_packets))
-        adapter.addFragment(SingleFragment(1, false), getString(R.string.text_night_packets))
-        adapter.addFragment(SingleFragment(2, false), getString(R.string.text_night_dirve))
-        adapter.addFragment(SingleFragment(3, false), getString(R.string.text_day_packets))
-        adapter.addFragment(SingleFragment(4, false), getString(R.string.text_week_packets))
+        if (sale != null) {
+            when(sale?.type) {
+                "0" -> {
+                    adapter.addFragment(SingleFragment(0, false), getString(R.string.text_packets))
+                    adapter.addFragment(SingleFragment(1, false), getString(R.string.text_night_packets))
+                    adapter.addFragment(SingleFragment(2, false), getString(R.string.text_night_dirve))
+                    adapter.addFragment(SingleFragment(3, false), getString(R.string.text_day_packets))
+                    adapter.addFragment(SingleFragment(4, false), getString(R.string.text_week_packets))
+                }
+                "1" -> {
+                    adapter.addFragment(SingleFragment(0, false), getString(R.string.text_night_packets))
+                    adapter.addFragment(SingleFragment(1, false), getString(R.string.text_packets))
+                    adapter.addFragment(SingleFragment(2, false), getString(R.string.text_night_dirve))
+                    adapter.addFragment(SingleFragment(3, false), getString(R.string.text_day_packets))
+                    adapter.addFragment(SingleFragment(4, false), getString(R.string.text_week_packets))
+                }
+                "2" -> {
+                    adapter.addFragment(SingleFragment(0, false), getString(R.string.text_night_dirve))
+                    adapter.addFragment(SingleFragment(1, false), getString(R.string.text_packets))
+                    adapter.addFragment(SingleFragment(2, false), getString(R.string.text_night_packets))
+                    adapter.addFragment(SingleFragment(3, false), getString(R.string.text_day_packets))
+                    adapter.addFragment(SingleFragment(4, false), getString(R.string.text_week_packets))
+                }
+                "4" -> {
+                    adapter.addFragment(SingleFragment(0, false), getString(R.string.text_day_packets))
+                    adapter.addFragment(SingleFragment(1, false), getString(R.string.text_packets))
+                    adapter.addFragment(SingleFragment(2, false), getString(R.string.text_night_packets))
+                    adapter.addFragment(SingleFragment(3, false), getString(R.string.text_night_dirve))
+                    adapter.addFragment(SingleFragment(4, false), getString(R.string.text_week_packets))
+                }
+                "5" -> {
+                    adapter.addFragment(SingleFragment(0, false), getString(R.string.text_week_packets))
+                    adapter.addFragment(SingleFragment(1, false), getString(R.string.text_packets))
+                    adapter.addFragment(SingleFragment(2, false), getString(R.string.text_night_packets))
+                    adapter.addFragment(SingleFragment(3, false), getString(R.string.text_night_dirve))
+                    adapter.addFragment(SingleFragment(4, false), getString(R.string.text_day_packets))
+                }
+            }
+        } else {
+            adapter.addFragment(SingleFragment(0, false), getString(R.string.text_packets))
+            adapter.addFragment(SingleFragment(1, false), getString(R.string.text_night_packets))
+            adapter.addFragment(SingleFragment(2, false), getString(R.string.text_night_dirve))
+            adapter.addFragment(SingleFragment(3, false), getString(R.string.text_day_packets))
+            adapter.addFragment(SingleFragment(4, false), getString(R.string.text_week_packets))
+        }
         viewPagerNet.adapter = adapter
         tabs.setViewPager(viewPagerNet)
 

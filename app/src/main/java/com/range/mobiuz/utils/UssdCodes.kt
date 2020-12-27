@@ -13,8 +13,8 @@ class UssdCodes {
         val dealerCode: String = "*010100180$encodedHash"
 
         const val callCentre = "+998971300909"
-        val balanceUssdRu = "*171*1*1*2$encodedHash"
-        val balanceUssdUz = "*100$encodedHash"
+        val balanceUssdRu = "*100*1$encodedHash"
+        val balanceUssdUz = "*100*1$encodedHash"
         val lastPayment = "*171*1*2$encodedHash"
         val myDisCharge = "*171*1*3$encodedHash"
         val myNumber = "*150$encodedHash"

@@ -68,6 +68,7 @@ class ServiceFragment : ScopedFragment(R.layout.fragment_service), ServiceAction
     private fun loadData() = launch {
         lazyDeferred { mobiuzRepository.getServices() }.value.await().observe(viewLifecycleOwner, Observer {
             if (it == null) return@Observer
+            if (it.isEmpty()) return@Observer
             bindUI(it)
         })
     }

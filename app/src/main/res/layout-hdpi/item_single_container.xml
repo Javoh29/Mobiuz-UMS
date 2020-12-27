@@ -78,6 +78,14 @@
         app:cardView_scale="0.8"
         app:cardBackgroundColor="@color/colorPrimary">
 
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/saleItemSingle"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:visibility="gone"
+            android:src="@drawable/ic_sale_white"
+            android:layout_gravity="end"/>
+
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"

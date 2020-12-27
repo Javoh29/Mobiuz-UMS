@@ -115,6 +115,7 @@
     <string name="text_more">Полезный</string>
     <string name="text_load_data">Данные загружаются</string>
     <string name="text_data_loaded">Данные загружены</string>
+    <string name="text_data_loaded_err">Ошибка при подключение к интернету</string>
     <string name="text_sum">сум</string>
     <string name="text_mb">МБ</string>
     <string name="text_day">сутка</string>
@@ -155,6 +156,7 @@
     <string name="text_change_lang">УЗБ</string>
     <string name="text_err_download">Произошло ошибка при загрузке</string>
     <string name="text_app_loading">Приложение загружается…</string>
+    <string name="text_welcome">Добро пожаловать!</string>
 
 
 </resources>

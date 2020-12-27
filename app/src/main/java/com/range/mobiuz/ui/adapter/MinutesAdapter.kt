@@ -4,8 +4,10 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.widget.AppCompatImageView
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.recyclerview.widget.RecyclerView
+import com.range.mobiuz.App.Companion.sale
 import com.skydoves.elasticviews.ElasticCardView
 import com.range.mobiuz.R
 import com.range.mobiuz.data.db.entity.MinutesModel
@@ -21,6 +23,7 @@ class MinutesAdapter(private val list: List<MinutesModel>, private val sAction: 
         val tvValue: AppCompatTextView = view.findViewById(R.id.tvValue)
         val tvPrice: AppCompatTextView = view.findViewById(R.id.tvPrice)
         val cardBuy: ElasticCardView = view.findViewById(R.id.cardBuy)
+        val saleImage: AppCompatImageView = view.findViewById(R.id.saleItemSingle)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MinutesViewHolder {
@@ -38,6 +41,10 @@ class MinutesAdapter(private val list: List<MinutesModel>, private val sAction: 
         if (list[position].type == 1) {
             holder.tvValue.text = "${holder.tvValue.context.getString(R.string.text_sms)} ${list[position].name}"
         } else holder.tvValue.text = "${list[position].name} ${holder.tvValue.context.getString(R.string.text_minute)}"
+
+        if (sale != null && sale?.sale == "2" && sale?.type == list[position].type.toString()) {
+            holder.saleImage.visibility = View.VISIBLE
+        }
 
         holder.tvPrice.text = list[position].price
 

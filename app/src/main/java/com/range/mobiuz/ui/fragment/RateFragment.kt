@@ -10,6 +10,7 @@ import androidx.appcompat.widget.AppCompatTextView
 import androidx.lifecycle.Observer
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.range.mobiuz.App
 import com.skydoves.elasticviews.ElasticButton
 import kotlinx.android.synthetic.main.fragment_rate.*
 import kotlinx.coroutines.launch
@@ -22,6 +23,8 @@ import com.range.mobiuz.ui.base.ScopedFragment
 import com.range.mobiuz.utils.UssdCodes
 import com.range.mobiuz.utils.lazyDeferred
 import com.range.mobiuz.utils.ussdCall
+import kotlinx.android.synthetic.main.fragment_rate.avi
+import kotlinx.android.synthetic.main.fragment_rate.tvSaleDate
 
 class RateFragment : ScopedFragment(R.layout.fragment_rate), RateAction {
 
@@ -59,6 +62,7 @@ class RateFragment : ScopedFragment(R.layout.fragment_rate), RateAction {
     private fun loadData() = launch {
         lazyDeferred { mobiuzRepository.getRate() }.value.await().observe(viewLifecycleOwner, Observer {
             if (it == null) return@Observer
+            if (it.isEmpty()) return@Observer
             bindUi(it)
         })
     }
@@ -73,6 +77,14 @@ class RateFragment : ScopedFragment(R.layout.fragment_rate), RateAction {
     private fun bindUi(list: List<RateModel>){
         recyclerRate.adapter = RateAdapter(list, this)
         avi.hide()
+        if (App.sale != null && App.sale?.code != "no") {
+            tvSaleDate.visibility = View.VISIBLE
+            if (unitProvider.getLang()) {
+                tvSaleDate.text = "Aksiya ${App.sale?.dateIn} dan\n${App.sale?.dateFor} gacha"
+            } else {
+                tvSaleDate.text = "Акция с ${App.sale?.dateIn}\nдо ${App.sale?.dateFor}"
+            }
+        }
     }
 
     override fun itemClick(code: String) {

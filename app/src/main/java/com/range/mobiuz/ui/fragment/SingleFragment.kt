@@ -1,5 +1,6 @@
 package com.range.mobiuz.ui.fragment
 
+import android.annotation.SuppressLint
 import android.app.Dialog
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
@@ -9,6 +10,7 @@ import android.view.Window
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.range.mobiuz.App.Companion.sale
 import com.skydoves.elasticviews.ElasticButton
 import kotlinx.android.synthetic.main.fragment_single.*
 import kotlinx.coroutines.launch
@@ -75,11 +77,13 @@ class SingleFragment(private val index: Int, private val isSMS: Boolean) : Scope
         if (isSMS) {
             lazyDeferred { mobiuzRepository.getMinutes() }.value.await().observe(viewLifecycleOwner, Observer {
                 if (it == null) return@Observer
+                if (it.isEmpty()) return@Observer
                 bindMinutesUI(it)
             })
         } else {
             lazyDeferred { mobiuzRepository.getPackets() }.value.await().observe(viewLifecycleOwner, Observer {
                 if (it == null) return@Observer
+                if (it.isEmpty()) return@Observer
                 bindPacketsUI(it)
             })
         }
@@ -92,6 +96,7 @@ class SingleFragment(private val index: Int, private val isSMS: Boolean) : Scope
         })
     }
 
+    @SuppressLint("SetTextI18n")
     private fun bindPacketsUI(list: List<PacketModel>) {
         val model: ArrayList<PacketModel> = ArrayList()
         list.forEach {
@@ -102,6 +107,14 @@ class SingleFragment(private val index: Int, private val isSMS: Boolean) : Scope
         recyclerSingle.adapter = PacketsAdapter(model, this)
         recyclerSingle.visibility = View.VISIBLE
         avi.hide()
+        if (sale != null && sale?.sale == "1" && sale?.type == index.toString()) {
+            tvSaleDate.visibility = View.VISIBLE
+            if (unitProvider.getLang()) {
+                tvSaleDate.text = "Aksiya ${sale?.dateIn} dan\n${sale?.dateFor} gacha"
+            } else {
+                tvSaleDate.text = "Акция с ${sale?.dateIn}\nдо ${sale?.dateFor}"
+            }
+        }
     }
 
     private fun bindMinutesUI(list: List<MinutesModel>) {
@@ -114,6 +127,14 @@ class SingleFragment(private val index: Int, private val isSMS: Boolean) : Scope
         recyclerSingle.adapter = MinutesAdapter(model, this)
         recyclerSingle.visibility = View.VISIBLE
         avi.hide()
+        if (sale != null && sale?.sale == "2" && sale?.type == index.toString()) {
+            tvSaleDate.visibility = View.VISIBLE
+            if (unitProvider.getLang()) {
+                tvSaleDate.text = "Aksiya ${sale?.dateIn} dan\n${sale?.dateFor} gacha"
+            } else {
+                tvSaleDate.text = "Акция с ${sale?.dateIn}\nдо ${sale?.dateFor}"
+            }
+        }
     }
 
     override fun itemClick(code: String) {

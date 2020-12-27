@@ -64,4 +64,22 @@ interface MobiuzDao {
     @Query("DELETE FROM dealer_code_table")
     fun deleteCode()
 
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun upsertSale(model: SaleModel)
+
+    @Query("SELECT * from sale_table")
+    fun getSale(): SaleModel?
+
+    @Query("DELETE FROM sale_table")
+    fun deleteSale()
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun upsertBanner(model: BannerModel)
+
+    @Query("SELECT * from banner_table")
+    fun getBanner(): LiveData<List<BannerModel>>
+
+    @Query("DELETE FROM banner_table")
+    fun deleteSBanner()
+
 }
