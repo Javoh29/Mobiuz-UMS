@@ -28,7 +28,7 @@ import com.range.mobiuz.utils.ussdCall
 
 class SingleFragment(private val index: Int, private val isSMS: Boolean) : ScopedFragment(R.layout.fragment_single), SingleAction {
 
-    private val mobiuzRepository: MobiuzRepository by instance<MobiuzRepository>()
+    private val mobiuzRepository: MobiuzRepository by instance()
 
     private var dialog: Dialog? = null
     private var btnOk: ElasticButton? = null
@@ -124,7 +124,7 @@ class SingleFragment(private val index: Int, private val isSMS: Boolean) : Scope
                 model.add(it)
             }
         }
-        recyclerSingle.adapter = MinutesAdapter(model, this)
+        recyclerSingle.adapter = MinutesAdapter(model, this, index)
         recyclerSingle.visibility = View.VISIBLE
         avi.hide()
         if (sale != null && sale?.sale == "2" && sale?.type == index.toString()) {

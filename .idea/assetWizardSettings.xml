@@ -310,8 +310,8 @@
                           <map>
                             <entry key="assetSourceType" value="FILE" />
                             <entry key="color" value="ff0025" />
-                            <entry key="outputName" value="ic_sale_white" />
-                            <entry key="sourceFile" value="C:\Users\comja\Pictures\Figma\mobiuz\ic_sale_white.svg" />
+                            <entry key="outputName" value="ic_phone" />
+                            <entry key="sourceFile" value="C:\Users\comja\Pictures\Figma\mobiuz\ic_phone.svg" />
                           </map>
                         </option>
                       </PersistentState>

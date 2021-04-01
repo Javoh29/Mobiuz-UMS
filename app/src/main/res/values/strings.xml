@@ -157,6 +157,10 @@
     <string name="text_err_download">Произошло ошибка при загрузке</string>
     <string name="text_app_loading">Приложение загружается…</string>
     <string name="text_welcome">Добро пожаловать!</string>
+    <string name="text_code">Код:</string>
+    <string name="text_ussd_codes">Ussd Коды</string>
+    <string name="text_check_rate">Проверка тарифа</string>
+    <string name="text_check_balance">Проверка баланса</string>
 
 
 </resources>

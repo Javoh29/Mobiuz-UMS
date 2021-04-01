@@ -15,6 +15,15 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+-dontwarn okio.**
+-dontwarn com.squareup.okhttp3.**
+-dontwarn com.squareup.retrofit2.**
+-dontwarn com.jakewharton.retrofit.**
+-dontwarn com.google.code.gson.**
+-dontwarn org.jetbrains.kotlinx.**
+-dontwarn androidx.room.**
+-dontwarn org.kodein.di.**
+-dontwarn com.github.bumptech.glide.**
 
 # Uncomment this to preserve the line number information for
 # debugging stack traces.

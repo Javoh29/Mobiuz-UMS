@@ -11,6 +11,7 @@ class UssdCodes {
     companion object {
         val encodedHash: String = Uri.encode("#")
         val dealerCode: String = "*010100180$encodedHash"
+        const val dealerCodeHash: String = "*010100180#"
 
         const val callCentre = "+998971300909"
         val balanceUssdRu = "*100*1$encodedHash"

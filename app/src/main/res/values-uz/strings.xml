@@ -168,4 +168,8 @@
     <string name="text_err_download">Yuklash paytida xatolik yuz berdi</string>
     <string name="text_app_loading">Ilova yuklanmoqda…</string>
     <string name="text_welcome">Xush kelibsiz!</string>
+    <string name="text_code">Kod:</string>
+    <string name="text_ussd_codes">Ussd Kodlar</string>
+    <string name="text_check_rate">Tarifni tekshirish</string>
+    <string name="text_check_balance">Balansni tekshirish</string>
 </resources>

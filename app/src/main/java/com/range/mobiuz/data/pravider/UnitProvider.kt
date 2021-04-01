@@ -12,4 +12,8 @@ interface UnitProvider {
     fun saveLang(lang: Boolean)
 
     fun getLang(): Boolean
+
+    fun saveReview(lang: Boolean)
+
+    fun getReview(): Boolean
 }

@@ -1,10 +1,12 @@
 package com.range.mobiuz.data.db.entity
 
 
+import androidx.annotation.Keep
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
+@Keep
 @Entity(tableName = "sale_table")
 data class SaleModel(
         @PrimaryKey(autoGenerate = false)

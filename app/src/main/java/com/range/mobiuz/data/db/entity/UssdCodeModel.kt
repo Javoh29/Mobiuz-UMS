@@ -7,10 +7,13 @@ import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
 @Keep
-@Entity(tableName = "dealer_code_table")
-data class DealerCode(
+@Entity(tableName = "ussd_codes_table")
+data class UssdCodeModel(
         @PrimaryKey(autoGenerate = false)
-        val id: Int = 0,
         @SerializedName("code")
-        val code: String
+        val code: String,
+        @SerializedName("def")
+        val def: String,
+        @SerializedName("def_ru")
+        val defRu: String
 )

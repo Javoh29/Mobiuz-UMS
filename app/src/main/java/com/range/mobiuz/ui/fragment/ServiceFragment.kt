@@ -25,7 +25,7 @@ import com.range.mobiuz.utils.ussdCall
 
 class ServiceFragment : ScopedFragment(R.layout.fragment_service), ServiceAction {
 
-    private val mobiuzRepository: MobiuzRepository by instance<MobiuzRepository>()
+    private val mobiuzRepository: MobiuzRepository by instance()
 
     private var dialog1: Dialog? = null
     private var dialog2: Dialog? = null
@@ -34,8 +34,6 @@ class ServiceFragment : ScopedFragment(R.layout.fragment_service), ServiceAction
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        recyclerService.layoutManager = LinearLayoutManager(context)
 
         dialog1 = Dialog(requireContext(), R.style.Theme_AppCompat_Light_Dialog_Alert)
         dialog1?.requestWindowFeature(Window.FEATURE_NO_TITLE)
@@ -76,6 +74,12 @@ class ServiceFragment : ScopedFragment(R.layout.fragment_service), ServiceAction
     private fun bindUI(list: List<ServiceModel>) {
         recyclerService.adapter = ServiceAdapter(list, this)
         avi.hide()
+
+        btnCheck.setOnClickListener {
+            if (unitProvider.getLang()) {
+                ussdCall(UssdCodes.balanceUssdRu, it.context)
+            } else ussdCall(UssdCodes.balanceUssdUz, it.context)
+        }
     }
 
     override fun itemConnectClick(code: String) {

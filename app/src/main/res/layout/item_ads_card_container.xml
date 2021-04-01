@@ -27,7 +27,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src="@drawable/img_ads_banner_1"
             app:miv_load_on_create="true"
             app:miv_max_relative_size="1"
             app:miv_min_relative_offset="0.3"

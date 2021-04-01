@@ -13,6 +13,7 @@ class UnitProviderImpl(private val context: Context, private val mobiuzDao: Mobi
 
     private val saveDate = "SAVE_DATA"
     private val language = "LANGUAGE"
+    private val review = "REVIEW"
 
     override suspend fun isOnline(): Boolean {
         val connectivityManager = context.getSystemService(Context.CONNECTIVITY_SERVICE)
@@ -42,6 +43,14 @@ class UnitProviderImpl(private val context: Context, private val mobiuzDao: Mobi
 
     override fun getLang(): Boolean {
         return preferences.getBoolean(language, false)?:false
+    }
+
+    override fun saveReview(re: Boolean) {
+        preferences.edit().putBoolean(review, re).apply()
+    }
+
+    override fun getReview(): Boolean {
+        return preferences.getBoolean(review, true)
     }
 
 }

@@ -101,6 +101,27 @@
                             <option name="y" value="396" />
                           </Point>
                         </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_splashFragment_to_homeFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="ussdCodesFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="345" />
+                            <option name="y" value="385" />
+                          </Point>
+                        </option>
                       </LayoutPositions>
                     </value>
                   </entry>

@@ -1,14 +1,15 @@
 package com.range.mobiuz.data.db.entity
 
 
+import androidx.annotation.Keep
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
+@Keep
 @Entity(tableName = "service_table")
 data class ServiceModel(
-        @PrimaryKey(autoGenerate = true)
-        var idTable: Int = 0,
+        @PrimaryKey(autoGenerate = false)
         @SerializedName("code")
         val code: String,
         @SerializedName("def")

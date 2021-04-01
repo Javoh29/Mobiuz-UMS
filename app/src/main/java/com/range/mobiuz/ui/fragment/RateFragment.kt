@@ -24,11 +24,13 @@ import com.range.mobiuz.utils.UssdCodes
 import com.range.mobiuz.utils.lazyDeferred
 import com.range.mobiuz.utils.ussdCall
 import kotlinx.android.synthetic.main.fragment_rate.avi
+import kotlinx.android.synthetic.main.fragment_rate.btnCheck
+import kotlinx.android.synthetic.main.fragment_rate.imgBack
 import kotlinx.android.synthetic.main.fragment_rate.tvSaleDate
 
 class RateFragment : ScopedFragment(R.layout.fragment_rate), RateAction {
 
-    private val mobiuzRepository: MobiuzRepository by instance<MobiuzRepository>()
+    private val mobiuzRepository: MobiuzRepository by instance()
 
     private var dialog: Dialog? = null
     private var btnOk: ElasticButton? = null
@@ -84,6 +86,12 @@ class RateFragment : ScopedFragment(R.layout.fragment_rate), RateAction {
             } else {
                 tvSaleDate.text = "Акция с ${App.sale?.dateIn}\nдо ${App.sale?.dateFor}"
             }
+        }
+
+        btnCheck.setOnClickListener {
+            if (unitProvider.getLang()) {
+                ussdCall(UssdCodes.balanceUssdRu, it.context)
+            } else ussdCall(UssdCodes.balanceUssdUz, it.context)
         }
     }
 

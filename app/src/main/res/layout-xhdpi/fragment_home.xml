@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     android:background="@drawable/img_home_bg">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -213,7 +214,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@android:color/black"
-                    android:textSize="15sp"
+                    android:textSize="14sp"
                     android:fontFamily="@font/roboto_bold"
                     android:text="@string/text_minutes_sms"
                     android:gravity="center"
@@ -353,7 +354,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:src="@drawable/ic_balance"/>
+                        android:src="@drawable/ic_phone"/>
 
                 </androidx.cardview.widget.CardView>
 
@@ -363,7 +364,7 @@
                     android:textColor="@android:color/black"
                     android:textSize="15sp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="@string/text_balance"
+                    android:text="@string/text_ussd_codes"
                     android:layout_gravity="center_horizontal|bottom"
                     android:layout_marginBottom="15dp"/>
 

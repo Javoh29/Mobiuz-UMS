@@ -1,8 +1,6 @@
 package com.range.mobiuz
 
-import android.app.Application
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
+import androidx.multidex.MultiDex
 import androidx.multidex.MultiDexApplication
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
@@ -32,6 +30,7 @@ class App: MultiDexApplication(), KodeinAware {
 
     override fun onCreate() {
         super.onCreate()
+        MultiDex.install(this)
     }
 
     companion object {

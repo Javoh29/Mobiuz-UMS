@@ -39,6 +39,12 @@ class MobiuzRepositoryImpl(
         }
     }
 
+    override suspend fun getUssdCodes(): LiveData<List<UssdCodeModel>> {
+        return withContext(Dispatchers.IO) {
+            return@withContext mobiuzDao.getUssdCodes()
+        }
+    }
+
     override suspend fun getDealerCode(): LiveData<DealerCode> {
         return withContext(Dispatchers.IO) {
             return@withContext mobiuzDao.getCode()
@@ -113,6 +119,14 @@ class MobiuzRepositoryImpl(
                 mobiuzDao.deleteService()
                 response4.body()!!.forEach {
                     mobiuzDao.upsertService(it)
+                }
+            } else isLoaded = false
+
+            val response5 = apiService.getUssdCodesAsync()
+            if (response5.isSuccessful && response5.body()!!.isNotEmpty()) {
+                mobiuzDao.deleteUssdCodes()
+                response5.body()!!.forEach {
+                    mobiuzDao.upsertUssdCodes(it)
                 }
             } else isLoaded = false
 

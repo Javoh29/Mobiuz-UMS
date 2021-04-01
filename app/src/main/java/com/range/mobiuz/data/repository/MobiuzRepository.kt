@@ -15,6 +15,8 @@ interface MobiuzRepository {
 
     suspend fun getServices(): LiveData<List<ServiceModel>>
 
+    suspend fun getUssdCodes(): LiveData<List<UssdCodeModel>>
+
     suspend fun getDealerCode(): LiveData<DealerCode>
 
     suspend fun getSale(): SaleModel?

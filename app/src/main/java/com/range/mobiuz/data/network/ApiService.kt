@@ -23,6 +23,9 @@ interface ApiService {
     @GET("services.json")
     suspend fun getServicesAsync(): Response<ServiceResponse>
 
+    @GET("ussd_codes.json")
+    suspend fun getUssdCodesAsync(): Response<UssdCodeResponse>
+
     @GET("sale.json")
     suspend fun getSaleAsync(): Response<SaleModel>
 

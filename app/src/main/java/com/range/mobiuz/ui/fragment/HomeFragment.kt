@@ -16,9 +16,6 @@ import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
-import kotlinx.android.synthetic.main.fragment_home.*
-import kotlinx.coroutines.launch
-import org.kodein.di.generic.instance
 import com.range.mobiuz.App.Companion.sale
 import com.range.mobiuz.R
 import com.range.mobiuz.data.db.entity.BannerModel
@@ -28,9 +25,11 @@ import com.range.mobiuz.ui.base.ScopedFragment
 import com.range.mobiuz.utils.UssdCodes
 import com.range.mobiuz.utils.lazyDeferred
 import com.range.mobiuz.utils.ussdCall
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
+import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.coroutines.launch
+import org.kodein.di.generic.instance
 import java.util.*
+
 
 class HomeFragment : ScopedFragment(R.layout.fragment_home) {
 
@@ -130,9 +129,7 @@ class HomeFragment : ScopedFragment(R.layout.fragment_home) {
         }
 
         cardBalance.setOnClickListener {
-            if (unitProvider.getLang()) {
-                ussdCall(UssdCodes.balanceUssdRu, it.context)
-            } else ussdCall(UssdCodes.balanceUssdUz, it.context)
+            Navigation.findNavController(it).navigate(HomeFragmentDirections.actionHomeFragmentToUssdCodesFragment())
         }
 
         layoutLang.setOnClickListener {
@@ -207,4 +204,5 @@ class HomeFragment : ScopedFragment(R.layout.fragment_home) {
         super.onStop()
         timer?.cancel()
     }
+
 }

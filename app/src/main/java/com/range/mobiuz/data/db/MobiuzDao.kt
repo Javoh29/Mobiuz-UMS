@@ -56,6 +56,15 @@ interface MobiuzDao {
     fun deleteService()
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun upsertUssdCodes(model: UssdCodeModel)
+
+    @Query("SELECT * from ussd_codes_table")
+    fun getUssdCodes(): LiveData<List<UssdCodeModel>>
+
+    @Query("DELETE FROM ussd_codes_table")
+    fun deleteUssdCodes()
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun upsertCode(model: DealerCode)
 
     @Query("SELECT * from dealer_code_table")
