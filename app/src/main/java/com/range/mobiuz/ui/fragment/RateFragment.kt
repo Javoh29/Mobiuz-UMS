@@ -79,7 +79,7 @@ class RateFragment : ScopedFragment(R.layout.fragment_rate), RateAction {
     private fun bindUi(list: List<RateModel>){
         recyclerRate.adapter = RateAdapter(list, this)
         avi.hide()
-        if (App.sale != null && App.sale?.code != "no") {
+        if (App.sale != null && App.sale!!.code.isNotEmpty() && App.sale?.code != "no") {
             tvSaleDate.visibility = View.VISIBLE
             if (unitProvider.getLang()) {
                 tvSaleDate.text = "Aksiya ${App.sale?.dateIn} dan\n${App.sale?.dateFor} gacha"

@@ -4,10 +4,12 @@ import android.Manifest
 import android.annotation.SuppressLint
 import android.app.Dialog
 import android.content.Intent
+import android.content.IntentSender
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.view.Window
 import androidx.appcompat.widget.AppCompatTextView
@@ -16,6 +18,14 @@ import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
+import com.google.android.material.snackbar.Snackbar
+import com.google.android.play.core.appupdate.AppUpdateInfo
+import com.google.android.play.core.appupdate.AppUpdateManager
+import com.google.android.play.core.appupdate.AppUpdateManagerFactory
+import com.google.android.play.core.install.InstallStateUpdatedListener
+import com.google.android.play.core.install.model.AppUpdateType
+import com.google.android.play.core.install.model.InstallStatus
+import com.google.android.play.core.install.model.UpdateAvailability
 import com.range.mobiuz.App.Companion.sale
 import com.range.mobiuz.R
 import com.range.mobiuz.data.db.entity.BannerModel
@@ -35,12 +45,16 @@ class HomeFragment : ScopedFragment(R.layout.fragment_home) {
 
     private val mobiuzRepository: MobiuzRepository by instance()
     private var timer: TimerTask? = null
+    private var mAppUpdateManager: AppUpdateManager? = null
+    private var updatedListener: InstallStateUpdatedListener? = null
+    private val RC_APP_UPDATE = 11
     @SuppressLint("SimpleDateFormat")
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         bindUI()
         bindSale()
+        checkUpdateApp()
         requestPermission()
     }
 
@@ -194,10 +208,59 @@ class HomeFragment : ScopedFragment(R.layout.fragment_home) {
                 "1" -> saleInternet.visibility = View.VISIBLE
                 "2" -> saleMinute.visibility = View.VISIBLE
             }
-            if (sale?.code != "no") {
-                saleRate.visibility = View.VISIBLE
+            if (sale!!.code.isNotEmpty()) {
+                if (sale?.code != "no") {
+                    saleRate.visibility = View.VISIBLE
+                }
             }
         }
+    }
+
+    private fun checkUpdateApp() {
+        mAppUpdateManager = AppUpdateManagerFactory.create(requireContext())
+
+        updatedListener = InstallStateUpdatedListener {
+            if (it.installStatus() == InstallStatus.DOWNLOADED){
+                popupSnackBarForCompleteUpdate()
+            } else if (it.installStatus() == InstallStatus.INSTALLED){
+                if (mAppUpdateManager != null){
+                    mAppUpdateManager?.unregisterListener(updatedListener!!)
+                }
+
+            } else {
+                Log.i("BAG", "InstallStateUpdatedListener: state: " + it.installStatus());
+            }
+        }
+
+        mAppUpdateManager?.registerListener(updatedListener!!)
+        mAppUpdateManager!!.appUpdateInfo.addOnSuccessListener { appUpdateInfo: AppUpdateInfo ->
+            if (appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE
+                    && appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.FLEXIBLE)) {
+                try {
+                    mAppUpdateManager?.startUpdateFlowForResult(
+                            appUpdateInfo, AppUpdateType.FLEXIBLE, requireActivity(), RC_APP_UPDATE)
+                } catch (e: IntentSender.SendIntentException) {
+                    e.printStackTrace()
+                }
+            } else if (appUpdateInfo.installStatus() == InstallStatus.DOWNLOADED) {
+                popupSnackBarForCompleteUpdate()
+            } else {
+                Log.e("BAG", "checkForAppUpdateAvailability: something else")
+            }
+        }
+    }
+
+    private fun popupSnackBarForCompleteUpdate() {
+        val snackBar: Snackbar = Snackbar.make(
+                requireView(),
+                "New app is ready!",
+                Snackbar.LENGTH_INDEFINITE)
+        snackBar.setAction("Install") {
+            if (mAppUpdateManager != null) {
+                mAppUpdateManager!!.completeUpdate()
+            }
+        }
+        snackBar.show()
     }
 
     override fun onStop() {

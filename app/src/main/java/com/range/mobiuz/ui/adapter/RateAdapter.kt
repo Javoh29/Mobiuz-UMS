@@ -27,7 +27,7 @@ class RateAdapter(private val list: List<RateModel>, private val rAction: RateAc
         val tvTraffic: AppCompatTextView = view.findViewById(R.id.tvMbCount)
         val cardOver: ElasticCardView = view.findViewById(R.id.cardOver)
         val saleImage: AppCompatImageView = view.findViewById(R.id.saleItemRate)
-        val list = sale?.code!!.split("|")
+        var list = if (sale != null) sale?.code!!.split("|") else null
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RateViewHolder {
@@ -47,7 +47,7 @@ class RateAdapter(private val list: List<RateModel>, private val rAction: RateAc
         } else holder.tvTitle.text = list[position].name
 
         if (sale != null && sale?.code != "no") {
-            if (holder.list.contains(list[position].code)){
+            if (holder.list!!.contains(list[position].code)){
                 holder.saleImage.visibility = View.VISIBLE
             } else {
                 holder.saleImage.visibility = View.GONE
