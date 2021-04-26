@@ -20,6 +20,10 @@ import com.range.mobiuz.ui.fragment.RateAction
 class RateAdapter(private val list: List<RateModel>, private val rAction: RateAction) : RecyclerView.Adapter<RateAdapter.RateViewHolder>() {
 
     class RateViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        val tvMothPay: AppCompatTextView = view.findViewById(R.id.mothPay)
+        val tvMinutesTitle: AppCompatTextView = view.findViewById(R.id.minutes)
+        val tvSmsTitle: AppCompatTextView = view.findViewById(R.id.sms)
+        val tvMbCount: AppCompatTextView = view.findViewById(R.id.mbCount)
         val tvTitle: AppCompatTextView = view.findViewById(R.id.tvTitle)
         val tvMothPrice: AppCompatTextView = view.findViewById(R.id.tvMothPrice)
         val tvSms: AppCompatTextView = view.findViewById(R.id.tvSmsCount)
@@ -58,6 +62,18 @@ class RateAdapter(private val list: List<RateModel>, private val rAction: RateAc
         holder.tvSms.text = "${list[position].sms} ${holder.tvSms.context.getString(R.string.text_sms)}"
         holder.tvMinutes.text = "${list[position].minutes} ${holder.tvMinutes.context.getString(R.string.text_minute_small)}"
         holder.tvTraffic.text = "${list[position].packet} ${holder.tvTraffic.context.getString(R.string.text_mb)}"
+
+        if (list[position].type == "1") {
+            holder.tvMothPay.text = "${holder.tvMothPay.text}\n${holder.itemView.context.getString(R.string.text_rate_type)}"
+            holder.tvMinutesTitle.text = "${holder.tvMinutesTitle.text}\n${holder.itemView.context.getString(R.string.text_rate_type)}"
+            holder.tvSmsTitle.text = "${holder.tvSmsTitle.text}\n${holder.itemView.context.getString(R.string.text_rate_type)}"
+            holder.tvMbCount.text = "${holder.tvMbCount.text}\n${holder.itemView.context.getString(R.string.text_rate_type)}"
+        } else {
+            holder.tvMothPay.text = holder.itemView.context.getString(R.string.text_moth_pay) + " ${holder.itemView.context.getString(R.string.text_moth)}"
+            holder.tvMinutesTitle.text = holder.itemView.context.getString(R.string.text_push_minutes)
+            holder.tvSmsTitle.text = holder.itemView.context.getString(R.string.text_sms)
+            holder.tvMbCount.text = holder.itemView.context.getString(R.string.text_traffic_count)
+        }
 
         holder.cardOver.setOnClickListener { rAction.itemClick(list[position].code) }
     }

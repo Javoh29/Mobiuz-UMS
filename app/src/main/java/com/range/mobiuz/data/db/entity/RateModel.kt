@@ -25,6 +25,8 @@ data class RateModel(
         val packet: String,
         @SerializedName("price")
         val price: String,
+        @SerializedName("type")
+        val type: String,
         @SerializedName("sms")
         val sms: String
 )

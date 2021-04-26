@@ -137,10 +137,10 @@
     <string name="confirm_service_ask">Вы действительно хотите подключить данную услугу?</string>
     <string name="text_sms">СМС</string>
     <string name="text_check_packets">Проверить остаток</string>
-    <string name="text_moth_pay">Месячный платеж</string>
+    <string name="text_moth_pay">Оплата в</string>
     <string name="text_over">Перейти</string>
-    <string name="text_push_minutes">Исходящие минуты</string>
-    <string name="text_traffic_count">Объем трафика</string>
+    <string name="text_push_minutes">Минуты</string>
+    <string name="text_traffic_count">Трафик</string>
     <string name="confirm_cancel_service_ask">Вы действительно хотите отключить данную услугу?</string>
     <string name="text_telegram_chanel">Telegram канал</string>
     <string name="text_wallet">Последний платеж</string>
@@ -161,6 +161,8 @@
     <string name="text_ussd_codes">Ussd Коды</string>
     <string name="text_check_rate">Проверка тарифа</string>
     <string name="text_check_balance">Проверка баланса</string>
+    <string name="text_rate_type">месяц/день</string>
+    <string name="text_moth">месяц</string>
 
 
 </resources>

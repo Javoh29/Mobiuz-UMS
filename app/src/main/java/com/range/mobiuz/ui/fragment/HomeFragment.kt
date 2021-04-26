@@ -8,6 +8,7 @@ import android.content.IntentSender
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -47,7 +48,6 @@ class HomeFragment : ScopedFragment(R.layout.fragment_home) {
     private var timer: TimerTask? = null
     private var mAppUpdateManager: AppUpdateManager? = null
     private var updatedListener: InstallStateUpdatedListener? = null
-    private val RC_APP_UPDATE = 11
     @SuppressLint("SimpleDateFormat")
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -238,7 +238,7 @@ class HomeFragment : ScopedFragment(R.layout.fragment_home) {
                     && appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.FLEXIBLE)) {
                 try {
                     mAppUpdateManager?.startUpdateFlowForResult(
-                            appUpdateInfo, AppUpdateType.FLEXIBLE, requireActivity(), RC_APP_UPDATE)
+                            appUpdateInfo, AppUpdateType.FLEXIBLE, requireActivity(), Build.VERSION_CODES.BASE)
                 } catch (e: IntentSender.SendIntentException) {
                     e.printStackTrace()
                 }

@@ -34,9 +34,8 @@
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/mothPay"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="58dp"
                     android:fontFamily="@font/roboto_medium"
                     android:text="@string/text_moth_pay"
                     android:textColor="@color/grey"
@@ -77,7 +76,7 @@
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/minutes"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_medium"
                     android:text="@string/text_push_minutes"
@@ -94,18 +93,18 @@
                     android:textSize="16sp"
                     android:fontFamily="@font/roboto_bold"
                     app:layout_constraintTop_toBottomOf="@id/minutes"
-                    app:layout_constraintStart_toStartOf="@id/minutes"/>
+                    app:layout_constraintEnd_toEndOf="parent"/>
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/mbCount"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/grey"
                     android:fontFamily="@font/roboto_medium"
                     android:text="@string/text_traffic_count"
                     android:layout_marginTop="10dp"
                     app:layout_constraintTop_toBottomOf="@id/tvMinutes"
-                    app:layout_constraintStart_toStartOf="@id/minutes"/>
+                    app:layout_constraintEnd_toEndOf="parent"/>
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/tvMbCount"
@@ -115,7 +114,7 @@
                     android:textSize="16sp"
                     android:fontFamily="@font/roboto_bold"
                     app:layout_constraintTop_toBottomOf="@id/mbCount"
-                    app:layout_constraintStart_toStartOf="@id/minutes"/>
+                    app:layout_constraintEnd_toEndOf="parent"/>
 
                 <com.skydoves.elasticviews.ElasticCardView
                     android:id="@+id/cardOver"

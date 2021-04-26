@@ -148,9 +148,9 @@
     <string name="confirm_service_ask">Quyidagi xizmatni yoqishga rozimisiz?</string>
     <string name="text_sms">SMS</string>
     <string name="text_check_packets">Qoldiqni tekshirish</string>
-    <string name="text_moth_pay">Oylik to‘lov</string>
+    <string name="text_moth_pay">To`lov</string>
     <string name="text_over">O‘tish</string>
-    <string name="text_push_minutes">Chiquvchi daqiqalar</string>
+    <string name="text_push_minutes">Daqiqalar</string>
     <string name="text_traffic_count">Trafik hajmi</string>
     <string name="confirm_cancel_service_ask">Вы действительно хотите отключить данную услугу?</string>
     <string name="text_telegram_chanel">Telegram kanal</string>
@@ -172,4 +172,6 @@
     <string name="text_ussd_codes">Ussd Kodlar</string>
     <string name="text_check_rate">Tarifni tekshirish</string>
     <string name="text_check_balance">Balansni tekshirish</string>
+    <string name="text_rate_type">oyiga/kuniga</string>
+    <string name="text_moth">oyiga</string>
 </resources>
